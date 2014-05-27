@@ -5638,6 +5638,7 @@ button.close {
 }
 .center-block {
   display: block;
+  float: none;
   margin-right: auto;
   margin-left: auto;
 }
@@ -5783,8 +5784,4 @@ button.close {
   }
 }
 
-.cell-center {
-  margin: auto;
-  max-width: 300px;
-}
 /*# sourceMappingURL=bootstrap.css.map */
