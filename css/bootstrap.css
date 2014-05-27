@@ -3743,6 +3743,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 18px;
   line-height: 20px;
   color: #999;
+  text-align: center;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4015,6 +4016,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-color: transparent;
   }
 }
+
+.navbar-link {
+  text-decoration: none;
+}
+
 .navbar-default .navbar-link {
   color: #777;
 }
