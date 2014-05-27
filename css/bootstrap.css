@@ -4017,15 +4017,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 
-.navbar-link {
-  text-decoration: none;
-}
-
 .navbar-default .navbar-link {
   color: #777;
 }
 .navbar-default .navbar-link:hover {
   color: #333;
+  text-decoration: none;
 }
 .navbar-inverse {
   background-color: #222;
@@ -4038,6 +4035,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-link:focus {
   color: #fff;
   background-color: transparent;
+  text-decoration: none;
 }
 .navbar-inverse .navbar-text {
   color: #999;
@@ -4115,6 +4113,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-inverse .navbar-link:hover {
   color: #fff;
+  text-decoration: none;
 }
 .breadcrumb {
   padding: 8px 15px;
