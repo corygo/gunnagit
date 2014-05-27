@@ -5638,7 +5638,6 @@ button.close {
 }
 .center-block {
   display: block;
-  float: none;
   margin-right: auto;
   margin-left: auto;
 }
