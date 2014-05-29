@@ -18,20 +18,12 @@
     <![endif]-->
 
     <style>
-      .goalbox {
-        margin: 65px 0px 15px 0px;
+
+      .box {
         padding: 10px;
-        background: #FFFFFF;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #CDCDCD;
-        text-align: center;
-        font-family: Helvetica;
-        color: #333;
       }
 
-      .goalbox .dark {
-        margin: 15px 0px 15px 0px;
+      .darkbox {
         background: #777;
         color: #FFFFFF;
         border-width: none;
@@ -39,12 +31,28 @@
         border-color: none;
       }
 
+      .lightbox {
+        background: #FFFFFF;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #CDCDCD;
+        color: #333;
+      }
+
+      .greybox {
+        background: #FFFFFF;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #CDCDCD;
+        color: #333;
+      }
+
       #days-since {
         font-size: 200px;
         letter-spacing: -12px;
         padding-right: 12px;
-        margin-top: -25px;
-        margin-bottom: -50px;
+        margin-top: -35px;
+        margin-bottom: -60px;
       }
 
       #light-font {
@@ -80,7 +88,7 @@
     </div>
 
     <div class="container">
-      <div class="goalbox">
+      <div class="lightbox box text-center">
         <h3>You are working on</h3>
         <h3><b>TONE</b><b class="caret"></b></h3>
       </div>
@@ -96,7 +104,7 @@
     </div>
 
     <div class="container">
-      <div class="goalbox dark">
+      <div class="darkbox box text-center">
         <h3><b>Motivate me</b></h3>
       </div>
     </div>

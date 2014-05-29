@@ -6,7 +6,7 @@
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: Helvetica;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -2998,7 +2998,7 @@ input[type="button"].btn-block {
   width: 0;
   height: 0;
   margin-left: 2px;
-  vertical-align: middle;
+  vertical-align: baseline;
   border-top: 15px solid;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
