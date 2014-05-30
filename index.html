@@ -42,6 +42,15 @@
         margin-bottom: 15px;
       }
 
+      #overlay {
+      display:none;
+      z-index:10;
+      background-color:#333;
+      opacity: .8;
+      width: 100%;
+      height: 100%;
+      }
+
       #days-since {
         font-size: 150px;
         letter-spacing: -12px;
@@ -71,11 +80,11 @@
           </div>
 
           <div class="col-xs-8 navbar-brand">
-            <a class="navbar-link" href="#">GUNNAGIT</a>
+            <a class="navbar-link" href="corygo.github.io/gunnagit">GUNNAGIT</a>
           </div>
 
           <div class="col-xs-2 navbar-brand" id="hamburger">
-            <a href="#menu-drawer"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <a href="#overlay"><span class="glyphicon glyphicon-align-justify"></span></a>
           </div>
 
         </div>
@@ -104,7 +113,7 @@
       </div>
     </div>
 
-    <div data-role="panel" data-position="right" data-position-fixed="true" class="menu-drawer">
+    <div data-role="panel" data-position="right" data-position-fixed="true" id="overlay">
       <ul>
         <li>Home</li>
         <li>Queue</li>
@@ -117,8 +126,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
-
-    $( "#menu-drawer" ).panel( "open" , optionsHash );
+    <script type="text/javascript">
+      $("#hamburger").overlay();
+    </script>
 
   </body>
 </html>
