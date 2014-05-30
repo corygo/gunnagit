@@ -32,14 +32,6 @@
         color: #333;
       }
 
-      .greybox {
-        background: #FFFFFF;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #CDCDCD;
-        color: #333;
-      }
-
       .footer {
         position: fixed;
         right: 0;
@@ -82,8 +74,8 @@
             <a class="navbar-link" href="#">GUNNAGIT</a>
           </div>
 
-          <div class="col-xs-2 navbar-brand">
-            <span class="glyphicon glyphicon-align-justify"></span>
+          <div class="col-xs-2 navbar-brand" id="hamburger">
+            <a href="#menu-drawer"><span class="glyphicon glyphicon-align-justify"></span></a>
           </div>
 
         </div>
@@ -112,9 +104,21 @@
       </div>
     </div>
 
+    <div data-role="panel" data-position="right" data-position-fixed="true" class="menu-drawer">
+      <ul>
+        <li>Home</li>
+        <li>Queue</li>
+        <li>Search</li>
+        <li>History</li>
+      </ul>
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
+
+    $( "#menu-drawer" ).panel( "open" , optionsHash );
+
   </body>
 </html>
