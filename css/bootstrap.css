@@ -13,6 +13,7 @@ html {
 body {
   margin: 0;
   background: #EDEDED;
+  min-height:640px;
 }
 article,
 aside,
