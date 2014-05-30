@@ -43,6 +43,7 @@
       }
 
       #overlay {
+      position: absolute;
       display:none;
       z-index:10;
       background-color:#333;
@@ -71,6 +72,15 @@
     </style>
   </head>
   <body>
+
+    <div data-role="panel" data-position="right" data-position-fixed="true" id="overlay">
+      <ul>
+        <li>Home</li>
+        <li>Queue</li>
+        <li>Search</li>
+        <li>History</li>
+      </ul>
+    </div>
 
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -111,15 +121,6 @@
       <div class="darkbox box text-center">
         <h3><b>Motivate me</b></h3>
       </div>
-    </div>
-
-    <div data-role="panel" data-position="right" data-position-fixed="true" id="overlay">
-      <ul>
-        <li>Home</li>
-        <li>Queue</li>
-        <li>Search</li>
-        <li>History</li>
-      </ul>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
