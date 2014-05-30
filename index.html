@@ -85,11 +85,18 @@
         opacity: 1;
       }
 
+      .close-menu {
+        text-align: right;
+      }
+
     </style>
   </head>
   <body>
 
     <div data-role="panel" data-position="right" data-position-fixed="true" id="overlay">
+      <div class="close-menu navbar-brand">
+        <span class="glyphicon glyphicon-remove"></span>
+      </div>
       <ul class="menu">
         <li>Home</li>
         <li>Queue</li>
@@ -149,6 +156,12 @@
       $(document).ready(function() {
         $('div#hamburger').click(function() {
             $('div#overlay').fadeIn('fast');
+        });
+      });
+
+      $(document).ready(function() {
+        $('div#close-menu').click(function() {
+            $('div#overlay').fadeOut('fast');
         });
       });
 
