@@ -63,9 +63,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        display:none;
-        z-index:10000;
-        background-color:#111;
+        display: none;
+        z-index: 10000;
+        background-color: #111;
         opacity: .95;
         width: 100%;
         height: 100%;
@@ -285,18 +285,18 @@
 
       $(document).ready(function() {
         $('div#hamburger').click(function() {
-            $('div.menu-overlay.overlay').fadeIn('fast');
+            $('.menu-overlay.overlay').fadeIn('fast');
         });
 
         $('div#close-menu').click(function() {
-            $('div.menu-overlay.overlay').fadeOut('fast');
+            $('.menu-overlay.overlay').fadeOut('fast');
         });
 
         $('div#goal-selection').click(function() {
             $(this).remove();
-            $('div.goalbox-overlay.overlay').show();
-            $('div#goal-select').show();
-            $('div#select-options').slideDown('slow');
+            $('.goalbox-overlay.overlay').show();
+            $('#goal-select').show();
+            $('#select-options').slideDown('slow');
         });
 
       });
