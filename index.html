@@ -77,7 +77,7 @@
       }
 
       .menu li {
-        font-size: 40px;
+        font-size: 32px;
         padding: 15px 0px 15px 0px;
         color: #FFFFFF;
         border-bottom: 1px solid #333;
@@ -99,6 +99,10 @@
         color: white;
       }
 
+      .list-text {
+        padding: 0px 0px 1px 5px;
+      }
+
     </style>
   </head>
   <body>
@@ -108,10 +112,27 @@
         <span class="glyphicon glyphicon-remove"></span>
       </div>
       <ul class="menu">
-        <li class="selected-list-item"><span class="glyphicon glyphicon-home"></span>Home</li>
-        <li><span class="glyphicon glyphicon-list-alt"></span>Queue</li>
-        <li><span class="glyphicon glyphicon-search"></span>Search</li>
-        <li style="border-bottom: none;"><span class="glyphicon glyphicon-book"></span>History</li>
+
+        <li>
+          <span class="glyphicon glyphicon-home"></span>
+          <div class="list-text selected-list-item">Home</div>
+        </li>
+
+        <li>
+          <span class="glyphicon glyphicon-list-alt"></span>
+          <div class="list-text">Queue</div>
+        </li>
+
+        <li>
+          <span class="glyphicon glyphicon-search"></span>
+          <div class="list-text">Search</div>
+        </li>
+
+        <li style="border-bottom: none;">
+          <span class="glyphicon glyphicon-book"></span>
+          <div class="list-text">History</div>
+        </li>
+
       </ul>
     </div>
 
