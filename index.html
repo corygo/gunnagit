@@ -94,6 +94,11 @@
         right: 0px;
       }
 
+      .selected-list-item {
+        font-weight: 400;
+        color: white;
+      }
+
     </style>
   </head>
   <body>
@@ -103,10 +108,10 @@
         <span class="glyphicon glyphicon-remove"></span>
       </div>
       <ul class="menu">
-        <li>Home</li>
-        <li>Queue</li>
-        <li>Search</li>
-        <li style="border-bottom: none;">History</li>
+        <li class="selected-list-item"><span class="glyphicon glyphicon-home"></span>Home</li>
+        <li><span class="glyphicon glyphicon-list-alt"></span>Queue</li>
+        <li><span class="glyphicon glyphicon-search"></span>Search</li>
+        <li style="border-bottom: none;"><span class="glyphicon glyphicon-book"></span>History</li>
       </ul>
     </div>
 
