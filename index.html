@@ -195,12 +195,10 @@
 
     <!--Goal box-->
 
-    <div class="container" id="goalbox">
+    <div class="container" id="goal-selection">
       <div class="lightbox box text-center" style="margin-top: 65px;">
         <h3>You are working on</h3>
-        <div id="goal-selection">
-          <h3><b>TONE</b><b class="caret"></b></h3>
-        </div>
+        <h3><b>TONE</b><b class="caret"></b></h3>
       </div>
     </div>
 
@@ -252,8 +250,8 @@
             $('div#overlay').fadeOut('fast');
         });
 
-        $('div#goalbox').click(function() {
-            $('div#goal-selection').fadeOut('fast');
+        $('div#goal-selection').click(function() {
+            $(this).fadeOut('fast');
             $('div#goal-select').fadeIn('fast');
         });
 
