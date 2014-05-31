@@ -72,8 +72,6 @@
       }
 
       #goal-select {
-        display: none;
-        z-index: 10001;
         position: absolute;
         top: 65px;
         left: 0px;
@@ -149,11 +147,6 @@
         font-size: 22px;
       }
 
-      #menu-overlay {
-        display: none;
-        z-index: 10001;
-      }
-
     </style>
   </head>
   <body>
@@ -161,9 +154,7 @@
 
     <!--Menu overlay-->
 
-    <div class="overlay"></div>
-
-    <div id="menu-overlay">
+    <div id="menu-overlay overlay">
       <div id="close-menu">
         <span class="glyphicon glyphicon-remove"></span>
       </div>
@@ -242,10 +233,10 @@
     </div>
 
 
-    <div class="container text-center" id="goal-select">
+    <div class="container text-center">
       <div id="goalbox">
 
-        <div class="lightbox box">
+        <div class="lightbox box" id="goal-select">
           <h3 id="select-title">Select your workout goal</h3>
         </div>
 
@@ -261,6 +252,8 @@
 
       </div>
     </div>
+
+    <div class="goalbox-overlay overlay"></div>
 
 
     <!--Days since-->
@@ -292,20 +285,17 @@
 
       $(document).ready(function() {
         $('div#hamburger').click(function() {
-            $('div.overlay').fadeIn('fast');
-            $('div#menu-overlay').fadeIn('fast');
+            $('div.menu-overlay overlay').fadeIn('fast');
         });
 
         $('div#close-menu').click(function() {
-            $('div.overlay').fadeOut('fast');
-            $('div#menu-overlay').fadeOut('fast');
+            $('div.menu-overlay overlay').fadeOut('fast');
         });
 
         $('div#goal-selection').click(function() {
-            $('div#goal-selection').remove();
-            $('div.overlay').fadeIn('fast');
+            $(this).remove();
+            $('div.goalbox-overlay overlay').show();
             $('div#goal-select').show();
-            $('div#select-title').show();
             $('div#select-options').slideDown('slow');
         });
 
