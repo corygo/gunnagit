@@ -156,6 +156,10 @@
 
       }
 
+      #workout-types {
+        display: none;
+      }
+
     </style>
   </head>
   <body>
@@ -249,7 +253,7 @@
           <h3 id="select-title">Select your workout goal</h3>
         </div>
 
-        <div>
+        <div id="workout-types">
           <ul id="select-options-list">
             <li id="select-options" class="graybox box text-center">
               <span style="padding-right: 5px;">TONE</span>
@@ -305,7 +309,7 @@
             $(this).remove();
             $('div.goalbox-overlay.overlay').show();
             $('#goal-select').show();
-            $('#select-options').slideDown('slow');
+            $('#workout-types').slideDown('slow');
         });
 
       });
