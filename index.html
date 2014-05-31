@@ -72,7 +72,7 @@
       }
 
       .menu {
-        padding: 0px 15px 0px 15px;
+        padding: 5px 15px 0px 15px;
         list-style-type: none;
       }
 
@@ -80,7 +80,7 @@
         font-size: 40px;
         padding: 15px 0px 15px 0px;
         color: #FFFFFF;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #333;
         font-weight: 100;
         opacity: 1;
       }
@@ -90,6 +90,8 @@
         padding: 15px 15px 0px 0px;
         color: #FFFFFF;
         font-size: 30px;
+        position: absolute;
+        right: 0px;
       }
 
     </style>
@@ -104,7 +106,7 @@
         <li>Home</li>
         <li>Queue</li>
         <li>Search</li>
-        <li>History</li>
+        <li style="border-bottom: none;">History</li>
       </ul>
     </div>
 
@@ -120,7 +122,7 @@
           </div>
 
           <div class="col-xs-2 navbar-brand" id="hamburger">
-            <a href="#overlay"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <span class="glyphicon glyphicon-align-justify"></span>
           </div>
 
         </div>
