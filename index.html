@@ -62,6 +62,10 @@
       height: 100%;
       }
 
+      #goal-select {
+        display: none;
+      }
+
       #days-since {
         font-size: 150px;
         letter-spacing: -12px;
@@ -116,6 +120,9 @@
   </head>
   <body>
 
+
+    <!--Menu overlay-->
+
     <div id="overlay">
       <div id="close-menu">
         <span class="glyphicon glyphicon-remove"></span>
@@ -163,6 +170,9 @@
 
     </div>
 
+
+    <!--Fixed top nav-->
+
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="row">
@@ -182,12 +192,28 @@
       </div>
     </div>
 
-    <div class="container">
+
+    <!--Goal box-->
+
+    <div class="container" id="goalbox">
       <div class="lightbox box text-center" style="margin-top: 65px;">
         <h3>You are working on</h3>
-        <h3><b>TONE</b><b class="caret"></b></h3>
+        <div class="goal-selection">
+          <h3><b>TONE</b><b class="caret"></b></h3>
+        </div>
+
+        <div id="goal-select">
+          <ul>
+            <li>TONE</li>
+            <li>STRENGTH</li>
+          </ul>
+        </div>
+
       </div>
     </div>
+
+
+    <!--Days since-->
 
     <div class="container text-center">
       <div id="days-since">14</div>
@@ -197,6 +223,9 @@
         </div>
       </div>
     </div>
+
+
+    <!--Motivation button-->
 
     <div class="container footer" style="margin-bottom: 15px;">
       <div class="darkbox box text-center">
@@ -218,6 +247,11 @@
 
         $('div#close-menu').click(function() {
             $('div#overlay').fadeOut('fast');
+        });
+
+        $('div#goalbox').click(function() {
+            $('div#goal-selection').fadeOut('fast');
+            $('div#goal-select').fadeIn('fast');
         });
 
       });
