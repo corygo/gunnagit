@@ -59,7 +59,7 @@
         bottom: 0px;
       }
 
-      #overlay {
+      .overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -73,7 +73,7 @@
 
       #goal-select {
         display: none;
-        z-index: 10;
+        z-index: 10001;
         position: absolute;
         top: 65px;
         left: 0px;
@@ -156,7 +156,7 @@
 
     <!--Menu overlay-->
 
-    <div id="overlay">
+    <div class="overlay">
       <div id="close-menu">
         <span class="glyphicon glyphicon-remove"></span>
       </div>
@@ -236,7 +236,7 @@
     </div>
 
 
-    <div class="container text-center" id="goal-select">
+    <div class="container text-center overlay" id="goal-select">
       <div id="goalbox">
 
         <div class="lightbox box">
@@ -286,11 +286,11 @@
 
       $(document).ready(function() {
         $('div#hamburger').click(function() {
-            $('div#overlay').fadeIn('fast');
+            $('div.overlay').fadeIn('fast');
         });
 
         $('div#close-menu').click(function() {
-            $('div#overlay').fadeOut('fast');
+            $('div.overlay').fadeOut('fast');
         });
 
         $('div#goal-selection').click(function() {
