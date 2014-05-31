@@ -205,8 +205,8 @@
 
     <div class="container" id="goal-select">
       <div class="lightbox box text-center" style="margin-top: 65px;">
-        <h3>Select what you'd like to work on:</h3>
-        <ul>
+        <h3 id="select-title">Select what you'd like to work on:</h3>
+        <ul id="select-options">
           <li>TONE</li>
           <li>STRENGTH</li>
         </ul>
@@ -251,8 +251,9 @@
         });
 
         $('div#goal-selection').click(function() {
-            $(this).fadeOut('fast');
-            $('div#goal-select').fadeIn('fast');
+            $('div#goal-selection').remove();
+            $('div#select-title').show();
+            $('div#select-options').slideDown("fast");
         });
 
       });
