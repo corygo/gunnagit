@@ -285,16 +285,16 @@
 
       $(document).ready(function() {
         $('div#hamburger').click(function() {
-            $('.menu-overlay, .overlay').fadeIn('fast');
+            $('div.menu-overlay.overlay').fadeIn('fast');
         });
 
         $('div#close-menu').click(function() {
-            $('.menu-overlay, .overlay').fadeOut('fast');
+            $('div.menu-overlay.overlay').fadeOut('fast');
         });
 
         $('div#goal-selection').click(function() {
             $(this).remove();
-            $('.goalbox-overlay, .overlay').show();
+            $('div.goalbox-overlay.overlay').show();
             $('#goal-select').show();
             $('#select-options').slideDown('slow');
         });
