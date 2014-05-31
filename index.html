@@ -156,7 +156,9 @@
 
     <!--Menu overlay-->
 
-    <div class="overlay">
+    <div class="overlay"></div>
+
+    <div id="menu-overlay">
       <div id="close-menu">
         <span class="glyphicon glyphicon-remove"></span>
       </div>
@@ -200,7 +202,6 @@
 
         </div>
       </div>
-
     </div>
 
 
@@ -236,7 +237,7 @@
     </div>
 
 
-    <div class="container text-center overlay" id="goal-select">
+    <div class="container text-center" id="goal-select">
       <div id="goalbox">
 
         <div class="lightbox box">
@@ -287,14 +288,17 @@
       $(document).ready(function() {
         $('div#hamburger').click(function() {
             $('div.overlay').fadeIn('fast');
+            $('div#menu-overlay').fadeIn('fast');
         });
 
         $('div#close-menu').click(function() {
             $('div.overlay').fadeOut('fast');
+            $('div#menu-overlay').fadeOut('fast');
         });
 
         $('div#goal-selection').click(function() {
             $('div#goal-selection').remove();
+            $('div.overlay').fadeIn('fast');
             $('div#goal-select').show();
             $('div#select-title').show();
             $('div#select-options').slideDown('slow');
