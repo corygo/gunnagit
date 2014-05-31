@@ -135,6 +135,21 @@
         font-size: 22px;
       }
 
+      .main-container {
+        padding: 15px;
+      }
+
+      #goal-selection {
+        postion: absolute;
+        top: 65px;
+      }
+
+      #goal-select {
+        postion: absolute;
+        top: 65px;
+      }
+
+
     </style>
   </head>
   <body>
@@ -211,52 +226,55 @@
       </div>
     </div>
 
+    <div class="container main-container">
 
-    <!--Goal box-->
+      <!--Goal box-->
 
-    <div class="container" id="goal-selection">
-      <div class="lightbox box text-center" style="margin-top: 65px;">
-        <h3>You are working on</h3>
-        <h3><b>TONE</b><b class="caret"></b></h3>
-      </div>
-    </div>
-
-
-    <div class="container" id="goal-select">
-
-      <div class="lightbox box text-center" style="margin-top: 65px;">
-        <h3 id="select-title">Select your workout goal</h3>
-      </div>
-
-      <div class="graybox box text-center" style="border-top: none;">
-        <ul id="select-options-list">
-          <li id="select-options" style="padding-top: 10px;">TONE</li>
-          <li id="select-options" style="border-top: 1px solid #ddd; padding-bottom: 0px;">STRENGTH</li>
-        </ul>
-      </div>
-
-    </div>
-
-
-    <!--Days since-->
-
-    <div class="container text-center">
-      <div id="days-since">14</div>
-        <div id="narrow">
-          <h3>days since you've been to the gym</h3>
-          <h3 style="margin-top: 15px"><span id="light-font">tisk, tisk, tisk</span></h3>
+      <div class="container" id="goal-selection">
+        <div class="lightbox box text-center">
+          <h3>You are working on</h3>
+          <h3><b>TONE</b><b class="caret"></b></h3>
         </div>
       </div>
-    </div>
 
 
-    <!--Motivation button-->
+      <div class="container" id="goal-select">
 
-    <div class="container footer" style="margin-bottom: 15px;">
-      <div class="darkbox box text-center">
-        <h3><b>Motivate me</b></h3>
+        <div class="lightbox box text-center" style="margin-top: 65px;">
+          <h3 id="select-title">Select your workout goal</h3>
+        </div>
+
+        <div class="graybox box text-center" style="border-top: none;">
+          <ul id="select-options-list">
+            <li id="select-options" style="padding-top: 10px;">TONE<span class="glyphicon glyphicon-ok"></span></li>
+            <li id="select-options" style="border-top: 1px solid #ddd; padding-bottom: 0px;">STRENGTH</li>
+          </ul>
+        </div>
+
       </div>
-    </div>
+
+
+      <!--Days since-->
+
+      <div class="container text-center">
+        <div id="days-since">14</div>
+          <div id="narrow">
+            <h3>days since you've been to the gym</h3>
+            <h3 style="margin-top: 15px"><span id="light-font">tisk, tisk, tisk</span></h3>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Motivation button-->
+
+      <div class="container footer" style="margin-bottom: 15px;">
+        <div class="darkbox box text-center">
+          <h3><b>Motivate me</b></h3>
+        </div>
+      </div>
+
+    </div> <!--End main container-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
