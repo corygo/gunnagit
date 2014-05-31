@@ -73,6 +73,14 @@
 
       #goal-select {
         display: none;
+        z-index: 10;
+        position: absolute;
+        top: 65px;
+      }
+
+      #goal-selection {
+        position: absolute;
+        top: 65px;
       }
 
       #days-since {
@@ -216,26 +224,23 @@
     <!--Goal box-->
 
     <div class="container" id="goal-selection">
-      <div class="lightbox box text-center" style="margin-top: 65px;">
+      <div class="lightbox box text-center">
         <h3>You are working on</h3>
         <h3><b>TONE</b><b class="caret"></b></h3>
       </div>
     </div>
 
 
-    <div class="container" id="goal-select" style="z-index: 10;">
+    <div class="container" id="goal-select">
 
-      <div class="lightbox box text-center" style="margin-top: 65px;">
+      <div class="lightbox box text-center">
         <h3 id="select-title">Select your workout goal</h3>
-      </div>
-
-      <div class="graybox box text-center" style="border-top: none;">
         <ul id="select-options-list">
-          <li id="select-options" style="padding-top: 10px;">
+          <li id="select-options" class="graybox box text-center">
             <span style="padding-right: 5px;">TONE</span>
             <span class="glyphicon glyphicon-ok"></span>
           </li>
-          <li id="select-options" style="border-top: 1px solid #ddd; padding-bottom: 0px;">STRENGTH</li>
+          <li id="select-options" class="graybox box text-center">STRENGTH</li>
         </ul>
       </div>
 
