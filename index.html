@@ -85,7 +85,7 @@
         opacity: 1;
       }
 
-      .close-menu {
+      #close-menu {
         text-align: right;
         padding: 15px 15px 0px 0px;
         color: #FFFFFF;
@@ -97,7 +97,7 @@
   <body>
 
     <div data-role="panel" data-position="right" data-position-fixed="true" id="overlay">
-      <div class="close-menu">
+      <div id="close-menu">
         <span class="glyphicon glyphicon-remove"></span>
       </div>
       <ul class="menu">
@@ -164,7 +164,7 @@
 
       $(document).ready(function() {
         $('div#close-menu').click(function() {
-            $('div#overlay').fadeOut('fast');
+            $(this).fadeOut('fast');
         });
       });
 
