@@ -49,6 +49,8 @@
         top: 65px;
         left: 0px;
         right: 0px;
+        display: none;
+        z-index: 10001;
       }
 
       .footer {
@@ -234,22 +236,21 @@
       </div>
     </div>
 
-    <div class="workout-selection overlay">
-      <div class="container text-center" id="goalbox">
+    <div class="workout-selection overlay"></div>
+    <div class="container text-center" id="goalbox">
 
-        <div class="lightbox box">
-          <h3 id="select-title">Select your workout goal</h3>
-        </div>
-
-        <ul id="select-options-list">
-          <li id="select-options" class="graybox box text-center" style="border-bottom: 1px solid #eee">
-            <span style="padding-right: 5px;">TONE</span>
-            <span class="glyphicon glyphicon-ok"></span>
-          </li>
-          <li id="select-options" class="graybox box text-center">STRENGTH</li>
-        </ul>
-
+      <div class="lightbox box">
+        <h3 id="select-title">Select your workout goal</h3>
       </div>
+
+      <ul id="select-options-list">
+        <li id="select-options" class="graybox box text-center" style="border-bottom: 1px solid #bbb">
+          <span style="padding-right: 5px;">TONE</span>
+          <span class="glyphicon glyphicon-ok"></span>
+        </li>
+        <li id="select-options" class="graybox box text-center">STRENGTH</li>
+      </ul>
+
     </div>
 
 
@@ -291,7 +292,8 @@
 
         $('div#goal-selection').click(function() {
             $(this).remove();
-            $('div.workout-selection.overlay').show();
+            $('div#goalbox').show();
+            $('div.workout-selection.overlay').slideDown();
         });
 
       });
