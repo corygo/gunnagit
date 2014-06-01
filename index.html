@@ -73,8 +73,6 @@
 
       #goal-select {
         position: absolute;
-        display: none;
-        z-index: 10001;
         top: 65px;
         left: 0px;
         right: 0px;
@@ -151,15 +149,6 @@
 
       .menu-overlay {
 
-      }
-
-      .goalbox-overlay {
-
-      }
-
-      #workout-types {
-        display: none;
-        z-index: 10001;
       }
 
     </style>
@@ -248,25 +237,21 @@
     </div>
 
 
-    <div class="container text-center" id="goalbox">
+    <div class="container text-center overlay" id="goalbox">
 
       <div class="lightbox box" id="goal-select">
         <h3 id="select-title">Select your workout goal</h3>
       </div>
 
-      <div id="workout-types">
-        <ul id="select-options-list">
-          <li id="select-options" class="graybox box text-center">
-            <span style="padding-right: 5px;">TONE</span>
-            <span class="glyphicon glyphicon-ok"></span>
-          </li>
-          <li id="select-options" class="graybox box text-center">STRENGTH</li>
-        </ul>
-      </div>
+      <ul id="select-options-list">
+        <li id="select-options" class="graybox box text-center">
+          <span style="padding-right: 5px;">TONE</span>
+          <span class="glyphicon glyphicon-ok"></span>
+        </li>
+        <li id="select-options" class="graybox box text-center">STRENGTH</li>
+      </ul>
 
     </div>
-
-    <div class="goalbox-overlay overlay"></div>
 
 
     <!--Days since-->
@@ -307,7 +292,6 @@
 
         $('div#goal-selection').click(function() {
             $(this).remove();
-            $('div.goalbox-overlay.overlay').show();
             $('div#goalbox').show();
         });
 
