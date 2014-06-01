@@ -151,6 +151,10 @@
 
       }
 
+      .workout-selection {
+
+      }
+
     </style>
   </head>
   <body>
@@ -236,21 +240,22 @@
       </div>
     </div>
 
+    <div class="workout-selection overlay">
+      <div class="container text-center" id="goalbox">
 
-    <div class="container text-center overlay" id="goalbox">
+        <div class="lightbox box" id="goal-select">
+          <h3 id="select-title">Select your workout goal</h3>
+        </div>
 
-      <div class="lightbox box" id="goal-select">
-        <h3 id="select-title">Select your workout goal</h3>
+        <ul id="select-options-list">
+          <li id="select-options" class="graybox box text-center">
+            <span style="padding-right: 5px;">TONE</span>
+            <span class="glyphicon glyphicon-ok"></span>
+          </li>
+          <li id="select-options" class="graybox box text-center">STRENGTH</li>
+        </ul>
+
       </div>
-
-      <ul id="select-options-list">
-        <li id="select-options" class="graybox box text-center">
-          <span style="padding-right: 5px;">TONE</span>
-          <span class="glyphicon glyphicon-ok"></span>
-        </li>
-        <li id="select-options" class="graybox box text-center">STRENGTH</li>
-      </ul>
-
     </div>
 
 
@@ -292,7 +297,7 @@
 
         $('div#goal-selection').click(function() {
             $(this).remove();
-            $('div#goalbox').show();
+            $('div.workout-selection.overlay').show();
         });
 
       });
