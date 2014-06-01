@@ -45,9 +45,6 @@
       }
 
       #goalbox {
-        border-width: 1px;
-        border-style: solid;
-        border-color: #CDCDCD;
         position: absolute;
         top: 65px;
         left: 0px;
@@ -294,7 +291,7 @@
 
         $('div#goal-selection').click(function() {
             $(this).remove();
-            $('div.workout-selection.overlay').show();
+            $('div.workout-selection.overlay').slideDown("slow");
         });
 
       });
