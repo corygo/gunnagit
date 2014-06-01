@@ -248,24 +248,22 @@
     </div>
 
 
-    <div class="container text-center">
-      <div id="goalbox">
+    <div class="container text-center" id="goalbox">
 
-        <div class="lightbox box" id="goal-select">
-          <h3 id="select-title">Select your workout goal</h3>
-        </div>
-
-        <div id="workout-types">
-          <ul id="select-options-list">
-            <li id="select-options" class="graybox box text-center">
-              <span style="padding-right: 5px;">TONE</span>
-              <span class="glyphicon glyphicon-ok"></span>
-            </li>
-            <li id="select-options" class="graybox box text-center">STRENGTH</li>
-          </ul>
-        </div>
-
+      <div class="lightbox box" id="goal-select">
+        <h3 id="select-title">Select your workout goal</h3>
       </div>
+
+      <div id="workout-types">
+        <ul id="select-options-list">
+          <li id="select-options" class="graybox box text-center">
+            <span style="padding-right: 5px;">TONE</span>
+            <span class="glyphicon glyphicon-ok"></span>
+          </li>
+          <li id="select-options" class="graybox box text-center">STRENGTH</li>
+        </ul>
+      </div>
+
     </div>
 
     <div class="goalbox-overlay overlay"></div>
@@ -310,8 +308,7 @@
         $('div#goal-selection').click(function() {
             $(this).remove();
             $('div.goalbox-overlay.overlay').show();
-            $('#goal-select').show();
-            $('#workout-types').slideDown('slow');
+            $('#goalbox').show();
         });
 
       });
