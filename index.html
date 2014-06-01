@@ -242,7 +242,7 @@
         </div>
 
         <ul id="select-options-list">
-          <li id="select-options" class="graybox box text-center">
+          <li id="select-options" class="graybox box text-center" style="border-bottom: 1px solid #eee">
             <span style="padding-right: 5px;">TONE</span>
             <span class="glyphicon glyphicon-ok"></span>
           </li>
@@ -291,7 +291,7 @@
 
         $('div#goal-selection').click(function() {
             $(this).remove();
-            $('div.workout-selection.overlay').slideDown("slow");
+            $('div.workout-selection.overlay').show();
         });
 
       });
