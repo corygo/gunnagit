@@ -53,6 +53,15 @@
         z-index: 10001;
       }
 
+      #workout-types {
+        position: absolute;
+        top: 105px;
+        left: 0px;
+        right: 0px;
+        display: none;
+        z-index: 10001;
+      }
+
       .footer {
         position: fixed;
         right: 0;
@@ -242,6 +251,9 @@
       <div class="lightbox box">
         <h3 id="select-title">Select your workout goal</h3>
       </div>
+    </div>
+
+    <div id="workout-types">
 
       <ul id="select-options-list">
         <li id="select-options" class="graybox box text-center" style="border-bottom: 1px solid #ddd">
@@ -292,8 +304,9 @@
 
         $('div#goal-selection').click(function() {
             $(this).remove();
-            $('div#goalbox').slideDown();
+            $('div#goalbox').show();
             $('div.workout-selection.overlay').show();
+            $('div#workout-types').slideDown('fast');
         });
 
       });
