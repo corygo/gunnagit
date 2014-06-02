@@ -169,7 +169,7 @@
 
       }
 
-      .motivation-screen {
+      #motivation-screen {
         display: none;
       }
 
@@ -226,7 +226,9 @@
       </div>
     </div>
 
-    <div class="container motivation-screen">
+    <!--Motivation screen-->
+
+    <div class="container" id="motivation-screen">
       <div id="close-menu">
         <span class="glyphicon glyphicon-remove"></span>
       </div>
@@ -328,11 +330,11 @@
 
       $(document).ready(function() {
         $('div#motivate-button').click(function() {
-          $('div.motivation-screen').slideUp('fast');
+          $('div#motivation-screen').slideUp('fast');
         });
 
         $('div#close-menu2').click(function() {
-            $('div.motivation-screen').slideDown('fast');
+            $('div#motivation-screen').slideDown('fast');
         });
 
         $('div#hamburger').click(function() {
