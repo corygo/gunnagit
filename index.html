@@ -146,7 +146,7 @@
         margin-bottom: 0px;
       }
 
-      #select-options {
+      .select-options {
         padding: 20px;
         font-weight: bold;
         font-size: 22px;
@@ -257,11 +257,11 @@
     <div class="container text-center" id="workout-types">
 
       <ul id="select-options-list">
-        <li id="select-options tone" class="graybox box text-center" style="border-bottom: 1px solid #ddd">
+        <li id="tone" class="select-options graybox box text-center" style="border-bottom: 1px solid #ddd">
           <span style="padding-right: 5px;">TONE</span>
           <span class="glyphicon glyphicon-ok"></span>
         </li>
-        <li id="select-options strength" class="graybox box text-center">STRENGTH</li>
+        <li id="strength" class="select-options graybox box text-center">STRENGTH</li>
       </ul>
 
     </div>
@@ -303,7 +303,7 @@
             $('div.menu-overlay.overlay').fadeOut('fast');
         });
 
-        $('li#select-options#tone').click(function() {
+        $('li#tone').click(function() {
           $('div#goal-selection').show();
           $('div#goalbox').fadeOut('fast');
           $('div.workout-selection.overlay').fadeOut('fast');
@@ -311,7 +311,7 @@
           document.getElementById('selected-workout').innerHTML = 'TONE';
         });
 
-        $('li#select-options#strength').click(function() {
+        $('li#strength').click(function() {
           $('div#goal-selection').show();
           $('div#goalbox').fadeOut('fast');
           $('div.workout-selection.overlay').fadeOut('fast');
