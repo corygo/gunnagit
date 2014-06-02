@@ -121,7 +121,16 @@
         opacity: 1;
       }
 
-      #close-menu {
+      #close-menu1 {
+        text-align: right;
+        padding: 15px 15px 0px 0px;
+        color: #FFFFFF;
+        font-size: 30px;
+        position: absolute;
+        right: 0px;
+      }
+
+      #close-menu2 {
         text-align: right;
         padding: 15px 15px 0px 0px;
         color: #FFFFFF;
@@ -158,6 +167,10 @@
 
       .menu-overlay, .workout-selection {
 
+      }
+
+      .motivation-screen {
+        display: none;
       }
 
     </style>
@@ -213,6 +226,22 @@
       </div>
     </div>
 
+    <div class="container motivation-screen">
+      <div id="close-menu">
+        <span class="glyphicon glyphicon-remove"></span>
+      </div>
+
+      <div>
+        <h1>Things that might go here:</h1>
+        <ul>
+          <li>Ask one of your friends to force you to go (connect FB)</li>
+          <li>"If you go today, you'll be entered to win..."</li>
+          <li>Sarcastic instructions to get to the gym like "Step 1, put on gym clothes..."</li>
+          <li>Let them set a reminder on their calendar</li>
+        <ul>
+      </div>
+
+    </div>
 
     <!--Fixed top nav-->
 
@@ -285,7 +314,7 @@
     <!--Motivation button-->
 
     <div class="container footer" style="margin-bottom: 15px;">
-      <div class="darkbox box text-center">
+      <div class="darkbox box text-center" id="motivate-button">
         <h3><b>Motivate me</b></h3>
       </div>
     </div>
@@ -298,11 +327,19 @@
     <script type="text/javascript">
 
       $(document).ready(function() {
+        $('div#motivate-button').click(function() {
+          $('div.motivation-screen').slideUp('fast');
+        });
+
+        $('div#close-menu2').click(function() {
+            $('div.motivation-screen').slideDown('fast');
+        });
+
         $('div#hamburger').click(function() {
             $('div.menu-overlay.overlay').fadeIn('fast');
         });
 
-        $('div#close-menu').click(function() {
+        $('div#close-menu1').click(function() {
             $('div.menu-overlay.overlay').fadeOut('fast');
         });
 
