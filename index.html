@@ -338,13 +338,38 @@
     <script type="text/javascript">
 
       $(document).ready(function() {
-        $('div#motivate-button').click(function() {
+        /*$('div#motivate-button').click(function() {
           $('div#motivation-screen').show();
         });
 
         $('div#close-menu2').click(function() {
             $('div#motivation-screen').slideDown('fast');
-        });
+        });*/
+
+        var container = $( "#motivation-screen" );
+
+
+            // Bind the link to toggle the slide.
+            $( "div#motivate-button" ).click(
+                function( event ){
+                    // Prevent the default event.
+                    event.preventDefault();
+
+                    // Toggle the slide based on its current
+                    // visibility.
+                    if (container.is( ":visible" )){
+
+                        // Hide - slide up.
+                        container.slideUp( 2000 );
+
+                    } else {
+
+                        // Show - slide down.
+                        container.slideDown( 2000 );
+
+                    }
+                }
+            );
 
         $('div#hamburger').click(function() {
             $('div.menu-overlay.overlay').fadeIn('fast');
