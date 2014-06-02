@@ -152,11 +152,11 @@
         font-size: 22px;
       }
 
-      .menu-overlay {
+      #tone, #strength, {
 
       }
 
-      .workout-selection {
+      .menu-overlay, .workout-selection {
 
       }
 
@@ -246,6 +246,7 @@
     </div>
 
     <div class="workout-selection overlay"></div>
+
     <div class="container text-center" id="goalbox">
 
       <div class="lightbox box">
@@ -256,11 +257,11 @@
     <div class="container text-center" id="workout-types">
 
       <ul id="select-options-list">
-        <li id="select-options 1" class="graybox box text-center" style="border-bottom: 1px solid #ddd">
+        <li id="select-options tone" class="graybox box text-center" style="border-bottom: 1px solid #ddd">
           <span style="padding-right: 5px;">TONE</span>
           <span class="glyphicon glyphicon-ok"></span>
         </li>
-        <li id="select-options 2" class="graybox box text-center">STRENGTH</li>
+        <li id="select-options strength" class="graybox box text-center">STRENGTH</li>
       </ul>
 
     </div>
@@ -302,14 +303,16 @@
             $('div.menu-overlay.overlay').fadeOut('fast');
         });
 
-        $('li#select-options#1').click(function() {
+        $('li#select-options#tone').click(function() {
+          $('div#goal-selection').show();
           $('div#goalbox').fadeOut('fast');
           $('div.workout-selection.overlay').fadeOut('fast');
           $('div#workout-types').fadeOut('fast');
           document.getElementById('selected-workout').innerHTML = 'TONE';
         });
 
-        $('li#select-options#2').click(function() {
+        $('li#select-options#strength').click(function() {
+          $('div#goal-selection').show();
           $('div#goalbox').fadeOut('fast');
           $('div.workout-selection.overlay').fadeOut('fast');
           $('div#workout-types').fadeOut('fast');
@@ -317,13 +320,14 @@
         });
 
         $('div.workout-selection.overlay').click(function() {
+          $('div#goal-selection').show();
           $('div#goalbox').fadeOut('fast');
           $('div.workout-selection.overlay').fadeOut('fast');
           $('div#workout-types').fadeOut('fast');
         });
 
         $('div#goal-selection').click(function() {
-            $(this).remove();
+            $(this).hide();
             $('div#goalbox').show();
             $('div.workout-selection.overlay').show();
             $('div#workout-types').slideDown('fast');
