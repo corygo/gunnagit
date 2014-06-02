@@ -241,7 +241,7 @@
     <div class="container" id="goal-selection">
       <div class="lightbox box text-center">
         <h3>You are working on</h3>
-        <h3><b>TONE</b><b class="caret"></b></h3>
+        <h3><span id="selected-workout"><b>TONE</b></span><b class="caret"></b></h3>
       </div>
     </div>
 
@@ -256,11 +256,11 @@
     <div class="container text-center" id="workout-types">
 
       <ul id="select-options-list">
-        <li id="select-options" class="graybox box text-center" style="border-bottom: 1px solid #ddd">
+        <li id="select-options 1" class="graybox box text-center" style="border-bottom: 1px solid #ddd">
           <span style="padding-right: 5px;">TONE</span>
           <span class="glyphicon glyphicon-ok"></span>
         </li>
-        <li id="select-options" class="graybox box text-center">STRENGTH</li>
+        <li id="select-options 2" class="graybox box text-center">STRENGTH</li>
       </ul>
 
     </div>
@@ -300,6 +300,26 @@
 
         $('div#close-menu').click(function() {
             $('div.menu-overlay.overlay').fadeOut('fast');
+        });
+
+        $('li#select-options#1').click(function() {
+          $('div#goalbox').fadeOut('fast');
+          $('div.workout-selection.overlay').fadeOut('fast');
+          $('div#workout-types').fadeOut('fast');
+          document.getElementById('selected-workout').innerHTML = 'TONE';
+        });
+
+        $('li#select-options#2').click(function() {
+          $('div#goalbox').fadeOut('fast');
+          $('div.workout-selection.overlay').fadeOut('fast');
+          $('div#workout-types').fadeOut('fast');
+          document.getElementById('selected-workout').innerHTML = 'STRENGTH';
+        });
+
+        $('div.workout-selection.overlay').click(function() {
+          $('div#goalbox').fadeOut('fast');
+          $('div.workout-selection.overlay').fadeOut('fast');
+          $('div#workout-types').fadeOut('fast');
         });
 
         $('div#goal-selection').click(function() {
