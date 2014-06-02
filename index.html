@@ -338,41 +338,38 @@
     <script type="text/javascript">
 
       $(document).ready(function() {
+        /*$('div#motivate-button').click(function() {
+          $('div#motivation-screen').show();
+        });
+
+        $('div#close-menu2').click(function() {
+            $('div#motivation-screen').slideDown('fast');
+        });*/
 
         var container = $( "#motivation-screen" );
 
 
-        // Bind the link to toggle the slide.
-        $( "div#motivate-button" ).click(
-            function( event ){
-                // Prevent the default event.
-                event.preventDefault();
+            // Bind the link to toggle the slide.
+            $( "div#motivate-button" ).click(
+                function( event ){
+                    // Prevent the default event.
+                    event.preventDefault();
 
-                // Toggle the slide based on its current
-                // visibility.
-                if (container.is( ":visible" )){
+                    // Toggle the slide based on its current
+                    // visibility.
+                    if (container.is( ":visible" )){
 
-                    // Show - slide down.
-                    container.slideDown( 200 );
+                        // Hide - slide up.
+                        container.slideUp( 200 );
+
+                    } else {
+
+                        // Show - slide down.
+                        container.slideDown( 200 );
+
+                    }
                 }
-            }
-        );
-
-        $( "div#close-menu2" ).click(
-            function( event ){
-                // Prevent the default event.
-                event.preventDefault();
-
-                // Toggle the slide based on its current
-                // visibility.
-                if (container.is( ":visible" )){
-
-                  // Hide - slide up.
-                  container.slideUp( 200 );
-
-                }
-            }
-        );
+            );
 
         $('div#hamburger').click(function() {
             $('div.menu-overlay.overlay').fadeIn('fast');
