@@ -259,9 +259,12 @@
       <ul id="select-options-list">
         <li id="tone" class="select-options graybox box text-center" style="border-bottom: 1px solid #ddd">
           <span style="padding-right: 5px;">TONE</span>
-          <span class="glyphicon glyphicon-ok"></span>
+          <span id="checkmark1" class="glyphicon glyphicon-ok"></span>
         </li>
-        <li id="strength" class="select-options graybox box text-center">STRENGTH</li>
+        <li id="strength" class="select-options graybox box text-center">
+          <span style="padding-right: 5px;">STRENGTH</span>
+          <span id="checkmark2" class="glyphicon glyphicon-ok"></span>
+        </li>
       </ul>
 
     </div>
@@ -305,32 +308,32 @@
 
         $('li#tone').click(function() {
           $('div#goal-selection').show();
-          $('div#goalbox').fadeOut('fast');
-          $('div.workout-selection.overlay').fadeOut('fast');
-          $('div#workout-types').fadeOut('fast');
+          $('div#goalbox').hide();
+          $('div.workout-selection.overlay').hide();
+          $('div#workout-types').hide();
           document.getElementById('selected-workout').innerHTML = 'TONE';
         });
 
         $('li#strength').click(function() {
           $('div#goal-selection').show();
-          $('div#goalbox').fadeOut('fast');
-          $('div.workout-selection.overlay').fadeOut('fast');
-          $('div#workout-types').fadeOut('fast');
+          $('div#goalbox').hide();
+          $('div.workout-selection.overlay').hide();
+          $('div#workout-types').hide();
           document.getElementById('selected-workout').innerHTML = 'STRENGTH';
         });
 
         $('div.workout-selection.overlay').click(function() {
           $('div#goal-selection').show();
-          $('div#goalbox').fadeOut('fast');
-          $('div.workout-selection.overlay').fadeOut('fast');
-          $('div#workout-types').fadeOut('fast');
+          $('div#goalbox').hide();
+          $('div.workout-selection.overlay').hide();
+          $('div#workout-types').hide();
         });
 
         $('div#goal-selection').click(function() {
             $(this).hide();
             $('div#goalbox').show();
             $('div.workout-selection.overlay').show();
-            $('div#workout-types').slideDown('fast');
+            $('div#workout-types').slideDown(100);
         });
 
       });
