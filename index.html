@@ -79,7 +79,7 @@
     <!--Menu overlay-->
 
     <div id="menu-overlay" class="dark-transparent-overlay overlay">
-      <div class="overlay-close-icon" id="close-main-menu">
+      <div class="top-right-icon" id="close-main-menu">
         <span class="glyphicon glyphicon-remove"></span>
       </div>
       <ul class="main-menu">
@@ -124,6 +124,7 @@
       </div>
     </div>
 
+
     <!--Motivation screen-->
 
     <div class="overlay screen-overlay">
@@ -131,7 +132,7 @@
 
         <div class="row" id="slide-screen">
           <div class="col-xs-10" style="padding: 25px;"><h2>Things that might go here:</h2></div>
-          <div class="col-xs-2 overlay-close-icon" id="close-motivation-screen">
+          <div class="col-xs-2 top-right-icon" id="close-motivation-screen">
             <h2><span class="glyphicon glyphicon-remove"></span></h2>
           </div>
         </div>
@@ -148,6 +149,7 @@
 
       </div>
     </div>
+
 
     <!--Fixed top nav-->
 
@@ -244,7 +246,7 @@
           if(container.is(":visible")) {
             container.slideUp(200);
           } else {
-          container.slideDown(200);
+            container.slideDown(200);
           }
         });
 
@@ -253,19 +255,19 @@
           if(container.is(":visible")) {
             container.slideUp(200);
           } else {
-          container.slideDown(200);
+            container.slideDown(200);
           }
         });
 
 
         /* Open and close main menu */
 
-        $("div#hamburger").click(function() {
-          $("div#menu-overlay").fadeIn("fast");
+        $("#hamburger").click(function() {
+          $("#menu-overlay").fadeIn("fast");
         });
 
-        $("div#close-main-menu").click(function() {
-          $("div#menu-overlay").fadeOut("fast");
+        $("#close-main-menu").click(function() {
+          $("#menu-overlay").fadeOut("fast");
         });
 
 
@@ -275,7 +277,7 @@
           $("#goal-selection").show();
           $("#goalbox, #workout-selection, #workout-types").hide();
           if ($("li").click(function(event)) = "TONE") {
-            document.getElementById("selected-workout").innerHTML = "TONE"
+            document.getElementById("selected-workout").innerHTML = "TONE";
             document.getElementById("checkmark1").className += "glyphicon glyphicon-ok";
             document.getElementById("checkmark2").className =
               document.getElementById("checkmark2").className.replace
