@@ -236,7 +236,7 @@
 
         var container = $( "div.overlay.screen-overlay" );
 
-        $("div#motivate-button").click(function(event) {
+        $("#motivate-button").click(function(event) {
           event.preventDefault();
           if (container.is(":visible")) {
             container.slideUp(200);
@@ -246,7 +246,7 @@
           }
         );
 
-        $("div#close-motivation-screen").click(function(event){
+        $("#close-motivation-screen").click(function(event){
           event.preventDefault();
           if (container.is(":visible")) {
             container.slideUp(200);
@@ -259,12 +259,12 @@
 
         /* Open and close main menu */
 
-        $('div#hamburger').click(function() {
-            $('div#menu-overlay').fadeIn('fast');
+        $('#hamburger').click(function() {
+            $('#menu-overlay').fadeIn('fast');
         });
 
-        $('div#close-main-menu').click(function() {
-            $('div#menu-overlay').fadeOut('fast');
+        $('#close-main-menu').click(function() {
+            $('#menu-overlay').fadeOut('fast');
         });
 
 
