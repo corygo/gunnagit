@@ -10,84 +10,30 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/structure.css" rel="stylesheet">
 
     <style>
 
-      .box {
-        padding: 10px 0px;
-      }
-
-      .darkbox {
-        background: #444;
-        color: #FFFFFF;
-        border-width: none;
-        border-style: none;
-        border-color: none;
-      }
-
-      .menu-footer {
-        padding: 17px 0px 17px 0px;
-        color: #333;
-        font-size: 32px;
-        text-align: center;
-        background-color: #000;
-        border-top: 1px solid #222;
-      }
-
-      .lightbox {
-        background: #FFFFFF;
-        color: #333;
-      }
-
-      .graybox {
-        background: #f5f5f5;
-        color: #333;
+      #slide-screen {
+        background-color: #e1e1e1;
+        border-bottom: 1px solid #ccc;
       }
 
       #goalbox {
-        position: absolute;
         top: 65px;
-        left: 0px;
-        right: 0px;
         display: none;
         z-index: 10001;
       }
 
       #workout-types {
-        position: absolute;
         top: 129px;
-        left: 0px;
-        right: 0px;
         display: none;
         z-index: 10001;
       }
 
-      .footer {
-        position: fixed;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-        top: auto;
-        bottom: 0px;
-      }
-
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: none;
-        z-index: 10000;
-        background-color: #111;
-        opacity: .95;
-        width: 100%;
-        height: 100%;
-      }
-
       #goal-selection {
-        position: absolute;
         top: 65px;
-        left: 0px;
-        right: 0px;
       }
 
       #days-since {
@@ -98,92 +44,29 @@
         margin-bottom: -50px;
       }
 
-      #light-font {
-        color: #ccc;
-        font-weight: 400;
-      }
-
-      #narrow {
-        padding: 0px 40px 0px 40px;
-      }
-
-      .menu {
-        padding: 5px 15px 0px 15px;
-        list-style-type: none;
-      }
-
-      .menu li {
-        font-size: 32px;
-        padding: 15px 0px 15px 0px;
-        color: #aaa;
-        border-bottom: 1px solid #333;
-        font-weight: 100;
-        opacity: 1;
-      }
-
-      #close-menu1 {
-        text-align: right;
-        padding: 15px 15px 0px 0px;
+      #close-main-menu {
         color: #FFFFFF;
         font-size: 30px;
-        position: absolute;
-        right: 0px;
       }
 
-      #close-menu2 {
-        text-align: right;
-        padding: 15px 15px 0px 0px;
-        color: #FFFFFF;
+      #close-motivation-screen {
+        color: #333;
         font-size: 30px;
-        position: absolute;
-        right: 0px;
       }
 
-      .selected-list-item {
-        font-weight: 400;
-        color: white;
-      }
-
-      .list-text {
-        padding-left: 5px;
-        vertical-align: text-bottom;
-      }
-
-      #select-options-list {
+      #select-options {
         list-style-type: none;
         margin-left: -40px;
         margin-bottom: 0px;
       }
 
-      .select-options {
+      #select-options li {
         padding: 20px;
         font-weight: bold;
         font-size: 22px;
       }
 
-      #tone, #strength, {
-
-      }
-
-      .menu-overlay, .workout-selection {
-
-      }
-
-      #motivation-screen {
-        display: none;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 10000;
-        background-color: #eee;
-        width: 100%;
-        height: 100%;
-      }
-
-      #slide-screen {
-        background-color: #e1e1e1;
-        border-bottom: 1px solid #ccc;
-      }
+      #tone, #strength, #menu-overlay, #workout-selection {}
 
     </style>
   </head>
@@ -192,36 +75,36 @@
 
     <!--Menu overlay-->
 
-    <div class="menu-overlay overlay">
-      <div id="close-menu1">
+    <div id="menu-overlay" class="overlay">
+      <div class="overlay-close-icon" id="close-main-menu">
         <span class="glyphicon glyphicon-remove"></span>
       </div>
-      <ul class="menu">
+      <ul class="main-menu">
 
         <li>
-          <span class="selected-list-item"><span class="glyphicon glyphicon-home"></span></span>
-          <span class="list-text selected-list-item">Home</span>
+          <span class="main-menu-selected"><span class="glyphicon glyphicon-home"></span></span>
+          <span class="selected-list-item">Home</span>
         </li>
 
         <li>
           <span class="glyphicon glyphicon-list-alt"></span>
-          <span class="list-text">Queue</span>
+          <span>Queue</span>
         </li>
 
         <li>
           <span class="glyphicon glyphicon-search"></span>
-          <span class="list-text">Search</span>
+          <span>Search</span>
         </li>
 
         <li style="border-bottom: none;">
           <span class="glyphicon glyphicon-book"></span>
-          <span class="list-text">History</span>
+          <span>History</span>
         </li>
 
       </ul>
 
       <div class="container footer">
-        <div class="row menu-footer">
+        <div class="row overlay-footer">
           <div class="col-xs-4">
             <span class="glyphicon glyphicon-question-sign"></span>
           </div>
@@ -240,12 +123,12 @@
 
     <!--Motivation screen-->
 
-    <div id="motivation-screen">
+    <div class="overlay screen-overlay">
       <div class="container">
 
         <div class="row" id="slide-screen">
           <div class="col-xs-10" style="padding: 25px;"><h2>Things that might go here:</h2></div>
-          <div class="col-xs-2 navbar-brand" id="close-menu2">
+          <div class="col-xs-2 overlay-close-icon" id="close-motivation-screen">
             <h2><span class="glyphicon glyphicon-remove"></span></h2>
           </div>
         </div>
@@ -287,30 +170,30 @@
 
     <!--Goal box-->
 
-    <div class="container" id="goal-selection">
+    <div class="container abso-content" id="goal-selection">
       <div class="lightbox box text-center">
         <h3>You are working on</h3>
         <h3><span id="selected-workout"><b>TONE</b></span><b class="caret"></b></h3>
       </div>
     </div>
 
-    <div class="workout-selection overlay"></div>
+    <div id="workout-selection" class="overlay"></div>
 
-    <div class="container text-center" id="goalbox">
+    <div class="container abso-content text-center" id="goalbox">
 
       <div class="lightbox box">
         <h3 id="select-title">Select your workout goal</h3>
       </div>
     </div>
 
-    <div class="container text-center" id="workout-types">
+    <div class="container abso-content text-center" id="workout-types">
 
-      <ul id="select-options-list">
-        <li id="tone" class="select-options graybox box text-center" style="border-bottom: 1px solid #ddd">
+      <ul id="select-options">
+        <li id="tone" class="graybox box text-center" style="border-bottom: 1px solid #ddd">
           <span style="padding-right: 5px;">TONE</span>
           <span id="checkmark1" class=""></span>
         </li>
-        <li id="strength" class="select-options graybox box text-center">
+        <li id="strength" class="graybox box text-center">
           <span style="padding-right: 5px;">STRENGTH</span>
           <span id="checkmark2" class=""></span>
         </li>
@@ -323,9 +206,9 @@
 
     <div class="container text-center" style="position: absolute; top: 165px; z-index: -1;">
       <div id="days-since">14</div>
-        <div id="narrow">
+        <div class="narrow">
           <h3>days since you've been to the gym</h3>
-          <h3 style="margin-top: 15px"><span id="light-font">tisk, tisk, tisk</span></h3>
+          <h3 style="margin-top: 15px"><span class="light-font">tisk, tisk, tisk</span></h3>
         </div>
       </div>
     </div>
@@ -348,7 +231,7 @@
 
       $(document).ready(function() {
 
-        var container = $( "#motivation-screen" );
+        var container = $( "div.overlay.screen-overlay" );
 
         // Bind the link to toggle the slide.
         $( "div#motivate-button" ).click(
@@ -372,7 +255,7 @@
             }
         );
 
-        $( "div#close-menu2" ).click(
+        $( "div#close-motivation-screen" ).click(
             function( event ){
                 // Prevent the default event.
                 event.preventDefault();
@@ -394,17 +277,17 @@
         );
 
         $('div#hamburger').click(function() {
-            $('div.menu-overlay.overlay').fadeIn('fast');
+            $('div#menu-overlay').fadeIn('fast');
         });
 
-        $('div#close-menu1').click(function() {
-            $('div.menu-overlay.overlay').fadeOut('fast');
+        $('div#close-main-menu').click(function() {
+            $('div#menu-overlay').fadeOut('fast');
         });
 
         $('li#tone').click(function() {
           $('div#goal-selection').show();
           $('div#goalbox').hide();
-          $('div.workout-selection.overlay').hide();
+          $('div#workout-selection').hide();
           $('div#workout-types').hide();
           document.getElementById('selected-workout').innerHTML = 'TONE';
           document.getElementById("checkmark1").className += "glyphicon glyphicon-ok";
@@ -416,7 +299,7 @@
         $('li#strength').click(function() {
           $('div#goal-selection').show();
           $('div#goalbox').hide();
-          $('div.workout-selection.overlay').hide();
+          $('div#workout-selection').hide();
           $('div#workout-types').hide();
           document.getElementById('selected-workout').innerHTML = 'STRENGTH';
           document.getElementById("checkmark2").className += "glyphicon glyphicon-ok";
@@ -425,17 +308,17 @@
               ( /(?:^|\s)glyphicon glyphicon-ok(?!\S)/g , '' );
         });
 
-        $('div.workout-selection.overlay').click(function() {
+        $('div#workout-selection').click(function() {
           $('div#goal-selection').show();
           $('div#goalbox').hide();
-          $('div.workout-selection.overlay').hide();
+          $('div#workout-selection').hide();
           $('div#workout-types').hide();
         });
 
         $('div#goal-selection').click(function() {
             $(this).hide();
             $('div#goalbox').show();
-            $('div.workout-selection.overlay').show();
+            $('div#workout-selection').show();
             $('div#workout-types').slideDown(100);
         });
 
