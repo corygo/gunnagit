@@ -136,7 +136,7 @@
         <div style="margin-top: 30px; margin-left: -15px;">
           <ul>
             <li>Ask one of your friends to force you to go (connect FB)</li>
-            <li>"If you go today, you'll be entered to win..."</li>
+            <li>"If you go today, you"ll be entered to win..."</li>
             <li>Sarcastic instructions to get to the gym like "Step 1, put on gym clothes..."</li>
             <li>Let them set a reminder on their calendar</li>
           <ul>
@@ -207,7 +207,7 @@
     <div class="container text-center" style="position: absolute; top: 165px; z-index: -1;">
       <div id="days-since">14</div>
         <div class="narrow">
-          <h3>days since you've been to the gym</h3>
+          <h3>days since you"ve been to the gym</h3>
           <h3 style="margin-top: 15px"><span class="light-font">tisk, tisk, tisk</span></h3>
         </div>
       </div>
@@ -257,42 +257,42 @@
 
         /* Open and close main menu */
 
-        $('#hamburger').click(function() {
-            $('#menu-overlay').fadeIn('fast');
+        $("#hamburger").click(function() {
+            $("#menu-overlay").fadeIn("fast");
         });
 
-        $('#close-main-menu').click(function() {
-            $('#menu-overlay').fadeOut('fast');
+        $("#close-main-menu").click(function() {
+            $("#menu-overlay").fadeOut("fast");
         });
 
 
         /* Open, close and update workout selection */
 
-        $('#tone, #strength').click(function() {
-          $('#goal-selection').show();
-          $('#goalbox, #workout-selection, #workout-types').hide();
-          if (document.getElementById('selected-workout').innerHTML = 'TONE') {
+        $("#tone, #strength").click(function() {
+          $("#goal-selection").show();
+          $("#goalbox, #workout-selection, #workout-types").hide();
+          if (document.getElementById("selected-workout").innerHTML = "TONE") {
             document.getElementById("checkmark1").className += "glyphicon glyphicon-ok";
             document.getElementById("checkmark2").className =
               document.getElementById("checkmark2").className.replace
-                ( /(?:^|\s)glyphicon glyphicon-ok(?!\S)/g , '' );
-          } else if (document.getElementById('selected-workout').innerHTML = 'STRENGTH';) {
+                ( /(?:^|\s)glyphicon glyphicon-ok(?!\S)/g , "" );
+          } else if (document.getElementById("selected-workout").innerHTML = "STRENGTH";) {
             document.getElementById("checkmark2").className += "glyphicon glyphicon-ok";
             document.getElementById("checkmark1").className =
               document.getElementById("checkmark1").className.replace
-                ( /(?:^|\s)glyphicon glyphicon-ok(?!\S)/g , '' );
+                ( /(?:^|\s)glyphicon glyphicon-ok(?!\S)/g , "" );
           }
         });
 
-        $('#workout-selection').click(function() {
-          $('#goal-selection').show();
-          $('#goalbox, #workout-selection, #workout-types').hide();
+        $("#workout-selection").click(function() {
+          $("#goal-selection").show();
+          $("#goalbox, #workout-selection, #workout-types").hide();
         });
 
-        $('#goal-selection').click(function() {
+        $("#goal-selection").click(function() {
             $(this).hide();
-            $('#goalbox, #workout-selection').show();
-            $('div#workout-types').slideDown(100);
+            $("#goalbox, #workout-selection").show();
+            $("div#workout-types").slideDown(100);
         });
 
 
