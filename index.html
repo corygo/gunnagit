@@ -238,23 +238,21 @@
 
         $("#motivate-button").click(function(event) {
           event.preventDefault();
-          if (container.is(":visible")) {
+          if(container.is(":visible")) {
             container.slideUp(200);
           } else {
-            container.slideDown(200);
-            }
+          container.slideDown(200);
           }
-        );
+        });
 
-        $("#close-motivation-screen").click(function(event){
+        $("#close-motivation-screen").click(function(event) {
           event.preventDefault();
-          if (container.is(":visible")) {
+          if(container.is(":visible")) {
             container.slideUp(200);
           } else {
-            container.slideDown(200);
-            }
+          container.slideDown(200);
           }
-        );
+        });
 
 
         /* Open and close main menu */
