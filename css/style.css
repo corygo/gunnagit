@@ -53,8 +53,8 @@
 }
 
 .light-transparent-overlay {
-  background-color: #ccc;
-  opacity: .75;
+  background-color: #bbb;
+  opacity: .5;
 }
 
 .screen-overlay {
