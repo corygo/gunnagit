@@ -276,13 +276,13 @@
         $("#tone, #strength").click(function() {
           $("#goal-selection").show();
           $("#goalbox, #workout-selection, #workout-types").hide();
-          if ($("li").click(function(event)) = "TONE") {
+          if ($("li").click(function(event)) === "TONE") {
             document.getElementById("selected-workout").innerHTML = "TONE";
             document.getElementById("checkmark1").className += "glyphicon glyphicon-ok";
             document.getElementById("checkmark2").className =
               document.getElementById("checkmark2").className.replace
               (/(?:^|\s)glyphicon glyphicon-ok(?!\S)/g , "");
-          } else if ($("li").click(function(event)) = "STRENGTH") {
+          } else if ($("li").click(function(event)) === "STRENGTH") {
             document.getElementById("selected-workout").innerHTML = "STRENGTH";
             document.getElementById("checkmark2").className += "glyphicon glyphicon-ok";
             document.getElementById("checkmark1").className =
