@@ -273,15 +273,21 @@
         /* Open, close and update workout selection */
 
         $("li").click(function(event) {
-          event.stopPropagation();
-          if (event.target.id === "tone") {
+
+          if (event.target.id === "tone" ||
+                $(event.target).parents("#tone").length > 0) {
             console.log("tone");
             document.getElementById("selected-workout").innerHTML = "TONE";
             document.getElementById("checkmark1").className += "glyphicon glyphicon-ok";
             document.getElementById("checkmark2").className =
               document.getElementById("checkmark2").className.replace
               (/(?:^|\s)glyphicon glyphicon-ok(?!\S)/g,"");
-          } else if (event.target.id === "strength") {
+          }
+
+
+
+          else if (event.target.id === "strength" ||
+                $(event.target).parents("#strength").length > 0) {
             console.log("strength");
             document.getElementById("selected-workout").innerHTML = "STRENGTH";
             document.getElementById("checkmark2").className += "glyphicon glyphicon-ok";
@@ -289,8 +295,10 @@
               document.getElementById("checkmark1").className.replace
               (/(?:^|\s)glyphicon glyphicon-ok(?!\S)/g,"");
           }
+
           $('#goal-selection').show();
           $('#goalbox, #workout-selection, #workout-types').hide();
+
         });
 
 
