@@ -273,7 +273,7 @@
 
         /* Open, close and update workout selection */
 
-        $("li").click(function(event) {
+        $("#tone, #strength").click(function(event) {
           $('#goal-selection').show();
           $('#goalbox, #workout-selection, #workout-types').hide();
           if (event.target.id.toString() === "tone") {
