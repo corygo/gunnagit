@@ -52,6 +52,11 @@
   opacity: .95;
 }
 
+.light-transparent-overlay {
+  background-color: #ccc;
+  opacity: .75;
+}
+
 .screen-overlay {
   background-color: #eee;
 }
