@@ -273,7 +273,7 @@
         /* Open, close and update workout selection */
 
         $("li").click(function(event) {
-          event.stopPropagation()
+          event.stopPropagation();
           if (event.target.id === "tone") {
             console.log("tone");
             document.getElementById("selected-workout").innerHTML = "TONE";
