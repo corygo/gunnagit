@@ -277,6 +277,7 @@
           $('#goal-selection').show();
           $('#goalbox, #workout-selection, #workout-types').hide();
           if (event.target.id === "#tone") {
+            $("#menu-overlay").show();
             document.getElementById("selected-workout").innerHTML = "TONE";
             document.getElementById("checkmark1").className += "glyphicon glyphicon-ok";
             document.getElementById("checkmark2").className =
