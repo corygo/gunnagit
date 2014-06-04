@@ -273,9 +273,6 @@
         /* Open, close and update workout selection */
 
         $("#tone, #strength").click(function(event) {
-          event.preventDefault();
-          $('#goal-selection').show();
-          $('#goalbox, #workout-selection, #workout-types').hide();
           if (event.target.id.toString() === "tone") {
             console.log("tone");
             document.getElementById("selected-workout").innerHTML = "TONE";
@@ -291,6 +288,8 @@
               document.getElementById("checkmark1").className.replace
               (/(?:^|\s)glyphicon glyphicon-ok(?!\S)/g,"");
           }
+          $('#goal-selection').show();
+          $('#goalbox, #workout-selection, #workout-types').hide();
         });
 
 
