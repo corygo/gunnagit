@@ -8,11 +8,16 @@
 
 
 .lightbox {
-  background: #FFFFFF;
+  background: #f5f5f5;
   color: #333;
 }
 
 .graybox {
+  background: #ccc;
+  color: #333;
+}
+
+.dark-graybox {
   background: #ccc;
   color: #333;
 }
