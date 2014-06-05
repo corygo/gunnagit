@@ -295,6 +295,14 @@
       $(document).ready(function() {
 
 
+        /* Open and close gym location detection overlay */
+
+        $("#tester").click(function() {
+          $("div.overlay.screen-overlay").fadeIn("fast");
+          $("#gym-location-detected").show();
+        });
+
+
         /* Open and close motivation screen */
 
         var container = $("div.overlay.screen-overlay");
