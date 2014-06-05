@@ -1,5 +1,6 @@
 .box {
   padding: 10px;
+  border-radius: 2px;
 }
 
 .footer {
@@ -36,5 +37,5 @@
 
 .modal {
   width: 70%;
-  
+
 }
