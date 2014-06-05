@@ -38,7 +38,7 @@
   vertical-align: text-bottom;
 }
 
-.main-menu-selected {
+.main-menu li main-menu-selected {
   font-weight: 400;
   color: white;
 }
