@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--stable 4-->
+<!-- stable 4 -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -66,7 +66,7 @@
         font-size: 22px;
       }
 
-      #tone, #strength, #menu-overlay, #workout-selection {}
+      #tone, #strength, #menu-overlay {}
 
     </style>
 
@@ -75,8 +75,15 @@
 
   <body>
 
+    <!-- INITIALLY HIDDEN -->
 
-    <!--Menu overlay-->
+    <!-- Overlays -->
+
+    <div class="light-transparent-overlay overlay"></div>
+    <div class="dark-transparent-overlay overlay"></div>
+
+
+    <!-- Menu -->
 
     <div id="menu-overlay" class="dark-transparent-overlay overlay">
       <div class="top-right-icon" id="close-main-menu">
@@ -125,7 +132,7 @@
     </div>
 
 
-    <!--Motivation screen-->
+    <!-- Motivation screen -->
 
     <div class="overlay screen-overlay">
       <div class="container">
@@ -151,7 +158,36 @@
     </div>
 
 
-    <!--Fixed top nav-->
+    <!-- Gym location detected overlay -->
+
+    <div class="container">
+      <div class="light-box box narrow abso-content text-center">
+        <div><img src="images/location-icon.png"></div>
+        <h4>Are you at the gym?</h4>
+
+        <div class="row">
+
+          <div class="col-xs-6">
+            <div class="graybox box text-center" id="">
+              <h3><b>Nope</b></h3>
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <div class="darkbox box text-center" id="">
+              <h3><b>Yep</b></h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- INITIALLY VISIBLE -->
+
+    <!-- Fixed top nav -->
 
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -173,7 +209,7 @@
     </div>
 
 
-    <!--Goal box-->
+    <!-- Goal box -->
 
     <div class="container abso-content" id="goal-selection">
       <div class="lightbox box text-center">
@@ -182,32 +218,30 @@
       </div>
     </div>
 
-    <div id="workout-selection" class="light-transparent-overlay overlay"></div>
-
     <div class="container abso-content text-center" id="goalbox">
-
       <div class="lightbox box">
         <h3 id="select-title">Select your workout goal</h3>
       </div>
     </div>
 
     <div class="container abso-content text-center" id="workout-types">
-
       <ul id="select-options">
+
         <li id="tone" class="graybox box text-center" style="border-bottom: 1px solid #ddd">
           <span style="padding-right: 5px;">TONE</span>
           <span id="checkmark1" class=""></span>
         </li>
+
         <li id="strength" class="graybox box text-center">
           <span style="padding-right: 5px;">STRENGTH</span>
           <span id="checkmark2" class=""></span>
         </li>
-      </ul>
 
+      </ul>
     </div>
 
 
-    <!--Days since-->
+    <!-- Days since -->
 
     <div class="container text-center" style="position: absolute; top: 165px; z-index: -1;">
       <div id="days-since">14</div>
@@ -219,7 +253,7 @@
     </div>
 
 
-    <!--Motivation button-->
+    <!-- Motivation button -->
 
     <div class="container footer" style="margin-bottom: 15px;">
       <div class="darkbox box text-center" id="motivate-button">
@@ -297,19 +331,19 @@
           }
 
           $('#goal-selection').show();
-          $('#goalbox, #workout-selection, #workout-types').hide();
+          $('#goalbox, .light-transparent-overlay.overlay, #workout-types').hide();
 
         });
 
 
-        $("#workout-selection").click(function() {
+        $(".light-transparent-overlay.overlay").click(function() {
           $("#goal-selection").show();
-          $("#goalbox, #workout-selection, #workout-types").hide();
+          $("#goalbox, .light-transparent-overlay.overlay, #workout-types").hide();
         });
 
         $("#goal-selection").click(function() {
             $(this).hide();
-            $("#goalbox, #workout-selection").show();
+            $("#goalbox, .light-transparent-overlay.overlay").show();
             $("div#workout-types").slideDown(100);
         });
 
