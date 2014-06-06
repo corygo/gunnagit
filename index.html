@@ -337,6 +337,19 @@
 
     <script type="text/javascript">
 
+
+      /* Hide address bar */
+
+      function quickHideAddressBar() {
+      	setTimeout(function() {
+      		if(window.pageYOffset !== 0) return;
+      		window.scrollTo(0, window.pageYOffset + 1);
+
+      	}, 1000);
+
+      }
+
+      
       $(document).ready(function() {
 
 
