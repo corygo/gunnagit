@@ -84,6 +84,10 @@
         color: #EDEDED;
       }
 
+      #second-chance {
+        display: none;
+      }
+
       #tone, #strength, #menu-overlay, #dark-overlay {}
 
     </style>
@@ -192,13 +196,13 @@
       <div style="padding: 0px 10px; margin-top: 30px;" class="row">
 
         <div style="padding: 0px 5px;" class="col-xs-6">
-          <div class="dark-graybox box text-center" id="">
+          <div class="dark-graybox box text-center" id="not-at-gym">
             <h3><b>Nope</b></h3>
           </div>
         </div>
 
         <div style="padding: 0px 5px;" class="col-xs-6">
-          <div class="darkbox box text-center" id="">
+          <div class="darkbox box text-center" id="at-gym">
             <h3><b>Yep</b></h3>
           </div>
         </div>
@@ -274,7 +278,8 @@
         <div class="narrow">
           <h3>days since you've been to the gym</h3>
           <h3 style="margin-top: 15px">
-            <span class="light-font">tisk, tisk, tisk</span>
+            <span id="tisk" class="light-font">tisk, tisk, tisk</span>
+            <span id="second-chance" class="light-font">Are you sure you're not at the gym?</span>
           </h3>
         </div>
       </div>
@@ -311,6 +316,11 @@
         $("#tester").click(function() {
           $("#dark-overlay").fadeIn("fast");
           $("#gym-location-detected").show();
+        });
+
+        $("#not-at-gym, #dark-overlay").click(function() {
+          $("#dark-overlay, #gym-location-detected, #tisk").hide();
+          $("#second-chance").show();
         });
 
 
