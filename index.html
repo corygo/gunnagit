@@ -51,7 +51,6 @@
 
       #days-since {
         font-size: 150px;
-        letter-spacing: -12px;
         padding-right: 12px;
         margin-top: -25px;
         margin-bottom: -50px;
@@ -86,6 +85,11 @@
 
       #when-at-gym {
         display: none;
+      }
+
+      #reminder {
+        top: 190px;
+        z-index: -1;
       }
 
       #tone, #strength, #menu-overlay, #dark-overlay {}
@@ -284,10 +288,9 @@
     </div>
 
 
-    <!-- Days since -->
+    <!-- Reminder -->
 
-    <div id="days-since" class="container abso-content text-center"
-            style="top: 165px; z-index: -1;">
+    <div id="reminder" class="container abso-content text-center">
       <div id="days-since">14</div>
         <div class="narrow">
           <h3>days since you've been to the gym</h3>
@@ -336,7 +339,7 @@
         });
 
         $("#at-gym").click(function() {
-          $("#dark-overlay, #gym-location-detected, #days-since").hide();
+          $("#dark-overlay, #gym-location-detected, #reminder").hide();
           $("#when-at-gym").show();
         });
 
