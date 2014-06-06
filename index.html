@@ -85,6 +85,8 @@
 
       #when-at-gym {
         display: none;
+        top: 180px;
+        z-index: -1;
       }
 
       #reminder {
@@ -217,15 +219,16 @@
 
     <!-- When at gym -->
 
-    <div id="when-at-gym" class="container abso-content"
-            style="top: 165px; z-index: -1;">
+    <div id="when-at-gym" class="container abso-content text-center">
+
       <div id="progress">
-        <img src="images/progress.png">
+        <img style="width: 60%" src="images/progress.png">
       </div>
-        <div class="narrow">
-          <h3>today's calorie burn</h3>
-        </div>
+
+      <div class="narrow">
+        <h3>today's calorie burn</h3>
       </div>
+
     </div>
 
 
