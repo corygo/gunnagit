@@ -94,7 +94,7 @@
         z-index: -1;
       }
 
-      #tone, #strength, #menu-overlay, #dark-overlay, #motivate-button {}
+      #tone, #strength, #menu-overlay, #dark-overlay, #motivate-button, #queue-button {}
 
     </style>
 
@@ -231,6 +231,12 @@
 
     </div>
 
+    <div id="queue-button" class="container footer">
+      <div class="darkbox box text-center" style="margin-bottom: 15px;">
+        <h3><b>Go to queue</b></h3>
+      </div>
+    </div>
+
 
     <!-- INITIALLY VISIBLE -->
 
@@ -343,7 +349,7 @@
 
         $("#at-gym").click(function() {
           $("#dark-overlay, #gym-location-detected, #reminder, #tester, #motivate-button").hide();
-          $("#when-at-gym").show();
+          $("#when-at-gym, #queue-button").show();
         });
 
 
