@@ -94,6 +94,10 @@
         z-index: -1;
       }
 
+      #motivation-button {
+        margin-bottom: 15px;
+      }
+
       #tone, #strength, #menu-overlay, #dark-overlay {}
 
     </style>
@@ -307,8 +311,8 @@
 
     <!-- Motivation button -->
 
-    <div class="container footer" style="margin-bottom: 15px;">
-      <div class="darkbox box text-center" id="motivate-button">
+    <div id="motivate-button" class="container footer">
+      <div class="darkbox box text-center">
         <h3><b>Motivate me</b></h3>
       </div>
     </div>
@@ -342,7 +346,7 @@
         });
 
         $("#at-gym").click(function() {
-          $("#dark-overlay, #gym-location-detected, #reminder, #tester").hide();
+          $("#dark-overlay, #gym-location-detected, #reminder, #tester, #motivation-button").hide();
           $("#when-at-gym").show();
         });
 
