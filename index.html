@@ -84,6 +84,10 @@
         color: #EDEDED;
       }
 
+      #when-at-gym {
+        display: none;
+      }
+
       #tone, #strength, #menu-overlay, #dark-overlay {}
 
     </style>
@@ -207,6 +211,20 @@
     </div>
 
 
+    <!-- When at gym -->
+
+    <div id="when-at-gym" class="container abso-content"
+            style="top: 165px; z-index: -1;">
+      <div id="progress">
+        <img src="images/progress.png">
+      </div>
+        <div class="narrow">
+          <h3>today's calorie burn</h3>
+        </div>
+      </div>
+    </div>
+
+
     <!-- INITIALLY VISIBLE -->
 
     <!-- Fixed top nav -->
@@ -268,7 +286,7 @@
 
     <!-- Days since -->
 
-    <div class="container abso-content text-center"
+    <div id="days-since" class="container abso-content text-center"
             style="top: 165px; z-index: -1;">
       <div id="days-since">14</div>
         <div class="narrow">
@@ -314,7 +332,12 @@
         });
 
         $("#not-at-gym, #dark-overlay").click(function() {
-          $("#dark-overlay, #gym-location-detected, #tisk").hide();
+          $("#dark-overlay, #gym-location-detected").hide();
+        });
+
+        $("#at-gym").click(function() {
+          $("#dark-overlay, #gym-location-detected, #days-since").hide();
+          $("#when-at-gym").show();
         });
 
 

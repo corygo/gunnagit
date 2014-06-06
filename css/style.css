@@ -10,6 +10,7 @@
 .lightbox {
   background: #FFFFFF;
   color: #333;
+  border: 1px solid #ddd;
 }
 
 .graybox {
