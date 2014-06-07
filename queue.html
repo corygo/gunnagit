@@ -169,7 +169,7 @@
         <p id="last-completed">Last completed 23 days ago</p>
 
         <div id="exercise-image" class="graybox box text-center">
-          <h1>animated image or video</h1>
+          <h1 styling="padding: 20px;">animated image or video</h1>
         </div>
 
         <div id="begin-exercise" class="darkbox box text-center">
@@ -206,11 +206,15 @@
 
       $(document).ready(function() {
 
-        var referrer =  document.referrer;
-        console.log(referrer);
 
-        $("#ID").click(function() {
+        //open and close main menu
 
+        $("#hamburger").click(function() {
+          $("#menu-overlay").fadeIn("fast");
+        });
+
+        $("#close-main-menu").click(function() {
+          $("#menu-overlay").fadeOut("fast");
         });
 
       });
