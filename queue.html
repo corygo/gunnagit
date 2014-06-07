@@ -23,7 +23,7 @@
 
       #search-bar {
         background-color: white;
-        color: #ccc;
+        color: #999;
         padding: 15px;
         border-bottom: 1px solid #ddd;
         font-weight: 200;
@@ -44,6 +44,16 @@
 
       #begin-exercise {
         margin-top: 10px;
+      }
+
+      #last-completed {
+        margin-top: -5px;
+        color: #999;
+
+      }
+
+      #card-actions {
+        
       }
 
     </style>
@@ -154,17 +164,36 @@
     <div class="container abso-content" id="exercise-card">
       <div class="lightbox box text-center">
         <h3>Bench Press</h3>
-        <p>Last completed 23 days ago</p>
+        <p id="last-completed">Last completed 23 days ago</p>
 
         <div id="exercise-image" class="graybox box text-center">
-          <h1>img</h1>
+          <h1>animated image or video</h1>
         </div>
 
         <div id="begin-exercise" class="darkbox box text-center">
           <h3>Begin exercise</h3>
         </div>
-
       </div>
+
+      <div id="card-actions" class="container">
+        <div class="lightgraybox box">
+          <div class="row">
+            <div class="col-xs-3">
+              <span class="glyphicon glyphicon-star">
+            </div>
+            <div class="col-xs-3">
+              <span class="glyphicon glyphicon-list-alt">
+            </div>
+            <div class="col-xs-3">
+              <span class="glyphicon glyphicon-ban-circle">
+            </div>
+            <div class="col-xs-3">
+              <span class="glyphicon glyphicon-fast-forward">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- JAVASCRIPT -->
