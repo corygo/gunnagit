@@ -56,11 +56,6 @@
         margin-bottom: -50px;
       }
 
-      #close-main-menu {
-        color: #FFFFFF;
-        font-size: 30px;
-      }
-
       #close-motivation-screen {
         color: #333;
         font-size: 30px;
@@ -118,7 +113,7 @@
     <!-- Menu -->
 
     <div id="menu-overlay" class="dark-transparent-overlay overlay">
-      <div class="top-right-icon" id="close-main-menu">
+      <div class="top-right-icon close-main-menu">
         <span class="glyphicon glyphicon-remove"></span>
       </div>
       <ul class="main-menu">
@@ -337,11 +332,6 @@
 
     <script type="text/javascript">
 
-
-      /* Hide address bar */
-
-
-
       $(document).ready(function() {
 
 
@@ -383,18 +373,6 @@
             container.slideDown(200);
           }
         });
-
-
-        /* Open and close main menu */
-
-        $("#hamburger").click(function() {
-          $("#menu-overlay").fadeIn("fast");
-        });
-
-        $("#close-main-menu").click(function() {
-          $("#menu-overlay").fadeOut("fast");
-        });
-
 
         /* Open, close and update workout selection */
 

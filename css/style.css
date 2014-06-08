@@ -15,9 +15,9 @@
 }
 
 .lightgraybox {
-  background: #f1f1f1;
-  color: #ddd;
-  border: 1px solid #ddd;
+  background: #e6e6e6;
+  color: #ccc;
+  border: 1px solid #d4d4d4;
 }
 
 .graybox {
@@ -82,4 +82,9 @@
 
 .narrow {
   margin: 0px 40px 0px 40px;
+}
+
+.close-main-menu {
+  color: #FFFFFF;
+  font-size: 30px;
 }
