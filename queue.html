@@ -170,7 +170,7 @@
         <div class="xs-col-11">
           <span id="search-placeholder">Type to find exercises or machines...</span>
           <form id="search-focus">
-            <input type="text">
+            <input type="search">
           </form>
         </div>
       </div>
@@ -222,10 +222,11 @@
     <script type="text/javascript">
 
       $(document).ready(function() {
-        $("#search-placeholder").hide();
-        $("#search-focus").show();
-        $("#search-focus").focus();
-
+        $("#search-placeholder").click(function() {
+          $(this).hide();
+          $("#search-focus").show();
+          $("#search-focus").focus();
+        });
 
       });
 
