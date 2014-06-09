@@ -160,9 +160,14 @@
 
     <div class="container">
       <div id="search-bar" class="row">
-        <div class="xs-col-12">
+        <div class="xs-col-1">
           <span class="glyphicon glyphicon-search"></span>
-          <span id="search-placeholder">Type to find exercises or machines...</span>
+        </div>
+        <div class="xs-col-11">
+          <form>
+            <span id="search-placeholder">Type to find exercises or machines...</span>
+            <input id="search-focus" type="text" value="search-query"></input>
+          </form>
         </div>
       </div>
     </div>
@@ -214,7 +219,8 @@
 
       $(document).ready(function() {
         $("#search-placeholder").hide();
-        
+        $("#search-focus").focus();
+
 
       });
 
