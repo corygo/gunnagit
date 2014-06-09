@@ -21,6 +21,10 @@
 
     <style>
 
+      #search-focus {
+        display: none;
+      }
+
       #search-bar {
         background-color: white;
         color: #aaa;
@@ -164,9 +168,9 @@
           <span class="glyphicon glyphicon-search"></span>
         </div>
         <div class="xs-col-11">
-            <span id="search-placeholder">Type to find exercises or machines...</span>
+          <span id="search-placeholder">Type to find exercises or machines...</span>
           <form>
-            <input id="search-focus" type="text" value="search-query">
+            <input id="search-focus" type="text">
           </form>
         </div>
       </div>
@@ -219,6 +223,7 @@
 
       $(document).ready(function() {
         $("#search-placeholder").hide();
+        $("#search-focus").show();
         $("#search-focus").focus();
 
 
