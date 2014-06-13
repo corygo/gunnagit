@@ -88,3 +88,27 @@
   color: #FFFFFF;
   font-size: 30px;
 }
+
+.search-bar {
+  background-color: white;
+  color: #aaa;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 200;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+
+.magnifying-glass {
+  padding-left: 5px;
+}
+
+.query-section {
+  padding-left: 0px;
+  margin-left: -20px;
+}
+
+.search-focus {
+  display: none;
+}

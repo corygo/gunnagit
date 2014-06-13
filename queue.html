@@ -21,21 +21,6 @@
 
     <style>
 
-      #search-focus {
-        display: none;
-      }
-
-      #search-bar {
-        background-color: white;
-        color: #aaa;
-        padding: 15px;
-        border-bottom: 1px solid #ddd;
-        font-weight: 200;
-        position: absolute;
-        top: 50px;
-        width: 100%;
-      }
-
       #exercise-card {
         top: 115px;
       }
@@ -61,11 +46,6 @@
         position: relative;
         margin-top: -2px;
         z-index: -1;
-      }
-
-      #query-section {
-        padding-left: 0px;
-        margin-left: -5px;
       }
 
     </style>
@@ -168,13 +148,13 @@
     <!-- Search bar -->
 
     <div class="container">
-      <div id="search-bar" class="row">
-        <div class="col-xs-2">
+      <div class="search-bar row">
+        <div class="magnifying-glass col-xs-2">
           <span class="glyphicon glyphicon-search"></span>
         </div>
-        <div id="query-section" class="col-xs-10">
+        <div class="query-section col-xs-10">
           <span id="search-placeholder">Type to find exercises or machines...</span>
-          <form id="search-focus">
+          <form class="search-focus">
             <input type="search">
           </form>
         </div>
@@ -225,15 +205,6 @@
     <script src="js/main.js"></script>
 
     <script type="text/javascript">
-
-      $(document).ready(function() {
-        $("#search-placeholder").click(function() {
-          $(this).hide();
-          $("#search-focus").show();
-          $("#search-focus").focus();
-        });
-
-      });
 
     </script>
 

@@ -106,7 +106,7 @@
           </div>
 
           <div class="col-xs-8 navbar-brand">
-            <a class="navbar-link" href="">Queue</a>
+            <a class="navbar-link" href="">Search</a>
           </div>
 
           <div class="col-xs-2 navbar-brand" id="hamburger">
@@ -122,12 +122,18 @@
 
     <div class="container">
       <div id="search-bar" class="row">
-        <div class="xs-col-12">
+        <div id="magnifying-glass" class="col-xs-2">
           <span class="glyphicon glyphicon-search"></span>
-          <span>Type to find exercises or machines...</span>
+        </div>
+        <div id="query-section" class="col-xs-10">
+          <span id="search-placeholder">Type to find exercises or machines...</span>
+          <form id="search-focus">
+            <input type="search">
+          </form>
         </div>
       </div>
     </div>
+
 
 
     <!-- JAVASCRIPT -->
