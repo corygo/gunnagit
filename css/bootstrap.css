@@ -291,7 +291,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #428bca;
+  color: inherit;
   text-decoration: none;
 }
 a:hover,
