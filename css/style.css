@@ -89,6 +89,11 @@
   font-size: 30px;
 }
 
+.left-icon {
+  padding-left: 5px;
+}
+
+
 .search-bar {
   background-color: white;
   color: #aaa;
@@ -98,10 +103,6 @@
   position: absolute;
   top: 50px;
   width: 100%;
-}
-
-.magnifying-glass {
-  padding-left: 5px;
 }
 
 .query-section {

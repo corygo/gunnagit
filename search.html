@@ -21,6 +21,39 @@
 
     <style>
 
+      #closeby {
+        background-color: #FCF2E1;
+        color: #aaa;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        font-weight: 200;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+      }
+
+      #browse {
+        background-color: #F3FDEE;
+        color: #aaa;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        font-weight: 200;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+      }
+
+      #favorites {
+        background-color: #EEF4FB;
+        color: #aaa;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        font-weight: 200;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+      }
+
     </style>
 
   </head>
@@ -122,7 +155,7 @@
 
     <div class="container">
       <div class="search-bar row">
-        <div class="magnifying-glass col-xs-2">
+        <div class="left-icon col-xs-2">
           <span class="glyphicon glyphicon-search"></span>
         </div>
         <div class="query-section col-xs-10">
@@ -132,6 +165,40 @@
           </form>
         </div>
       </div>
+    </div>
+
+
+    <!-- Default and recent searches -->
+
+    <div class="container">
+
+      <div id="closeby" class="row">
+        <div class="left-icon col-xs-2">
+          <span class="glyphicon glyphicon-map-marker"></span>
+        </div>
+        <div class="query-section col-xs-10">
+          <span id="">Exercises from closeby machines</span>
+        </div>
+      </div>
+
+      <div id="browse" class="row">
+        <div class="left-icon col-xs-2">
+          <span class="glyphicon glyphicon-th"></span>
+        </div>
+        <div class="query-section col-xs-10">
+          <span id="">Browse exercises by muscle group</span>
+        </div>
+      </div>
+
+      <div id="favorites" class="row">
+        <div class="left-icon col-xs-2">
+          <span class="glyphicon glyphicon-star"></span>
+        </div>
+        <div class="query-section col-xs-10">
+          <span id="">Favorite exercises</span>
+        </div>
+      </div>
+
     </div>
 
 
