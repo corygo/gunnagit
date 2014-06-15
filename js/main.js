@@ -10,10 +10,8 @@ $(document).ready(function() {
     $("#menu-overlay").fadeOut("fast");
   });
 
-  $("#search-placeholder").click(function() {
-    $(this).hide();
-    $(".search-focus").show();
-    $(".search-focus").focus();
+  $(".search-focus").click(function() {
+    $(this).focus();
   });
 
 });
