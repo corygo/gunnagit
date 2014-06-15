@@ -10,8 +10,18 @@ $(document).ready(function() {
     $("#menu-overlay").fadeOut("fast");
   });
 
-  $(".search-focus").click(function() {
-    $(this).focus();
+});
+
+$(function() {
+
+  $('.search-focus').data('holder',$('#myId').attr('placeholder'));
+
+  $('.search-focus').focusin(function() {
+      $(this).attr('placeholder','');
+  });
+
+  $('.search-focus').focusout(function() {
+      $(this).attr('placeholder',$(this).data('holder'));
   });
 
 });
