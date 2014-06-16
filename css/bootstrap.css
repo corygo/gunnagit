@@ -296,7 +296,6 @@ a {
 }
 a:hover,
 a:focus {
-  color: #2a6496;
   text-decoration: none;
 }
 a:focus {
@@ -3051,14 +3050,12 @@ input[type="button"].btn-block {
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: #262626;
   text-decoration: none;
   background-color: #f5f5f5;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #fff;
   text-decoration: none;
   background-color: #428bca;
   outline: 0;
@@ -3514,7 +3511,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555;
   cursor: default;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -3974,13 +3970,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
   background-color: #e7e7e7;
 }
 .navbar-default .navbar-nav > .disabled > a,
@@ -4006,7 +4000,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #555;
   background-color: #e7e7e7;
 }
 @media (max-width: 767px) {
@@ -4015,13 +4008,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555;
     background-color: #e7e7e7;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
