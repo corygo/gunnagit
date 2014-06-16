@@ -203,6 +203,10 @@ ol {
   width: 100%;
 }
 
+.light {
+  color: #ccc;
+}
+
 .search-bar {
   background-color: white;
   color: #aaa;
