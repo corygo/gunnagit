@@ -30,6 +30,24 @@
         background-color: #ddd;
       }
 
+      .x1 {
+      margin:0px auto;
+      }
+
+      .x2 {
+          overflow:hidden;
+          display:block;
+          float:left;
+          width:auto;
+          height:auto;
+          position: relative;
+          border-radius:50%;
+          -moz-border-radius:50%;
+          -webkit-border-radius:50%;
+          -khtml-border-radius: 50%;
+          background:#eee;
+      }
+
       #set-label {
         font-size: 10px;
         font-weight: 200;
@@ -136,13 +154,15 @@
       </div>
     </div>
 
-    <div id="set-details" class="container abso-content">
+    <!-- <div id="set-details" class="container abso-content">
       <div class="lightbox box text-center">
         <div class="row">
           <div class="col-xs-4">
             <div id="set-details-circle">
-              <div id="set-number">2</div>
-              <div id="set-label">set</div>
+              <div>
+                <div id="set-number">2</div>
+                <div id="set-label">set</div>
+              </div>
             </div>
           </div>
 
@@ -161,7 +181,29 @@
           </div>
         </div
       </div>
-    </div>
+    </div> -->
+
+
+    <div id="set-details" class="container abso-content">
+      <div class="lightbox box text-center">
+        <div class="x1">
+          <div class="x2">
+            <div id="set-number">2</div>
+            <div id="set-label">set</div>
+          </div>
+
+          <div class="x2">
+            <div id="set-number">2</div>
+            <div id="set-label">set</div>
+          </div>
+
+          <div class="x2">
+            <div id="set-number">2</div>
+            <div id="set-label">set</div>
+          </div>
+        </div>
+      </div>
+    </div>  
 
 
 
