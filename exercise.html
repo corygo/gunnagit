@@ -43,6 +43,7 @@
 
       #set-large {
         font-size: 40px;
+        margin-bottom: -12px;
       }
 
       #set-small {
@@ -66,7 +67,16 @@
       }
 
       .unselected-row {
+        color: #ccc;
+      }
 
+      .unselected-row > #set-large {
+        font-size: 40px;
+        margin-bottom: -12px;
+      }
+
+      .unselected-row > #set-action {
+        font-size: 50px;
       }
 
     </style>
@@ -211,18 +221,18 @@
         </div>
 
         <div class="col-xs-3">
-          <div id="set-large">15</div>
+          <div id="set-number">15</div>
           <div id="set-small">reps</div>
         </div>
 
         <div class="col-xs-3">
-          <div id="set-large">75</div>
+          <div id="set-number">75</div>
           <div id="set-small">lbs</div>
         </div>
 
         <div class="col-xs-3">
           <span id="set-action">
-            <span class="glyphicon glyphicon-play-circle"></span>
+            –
           </span>
         </div>
       </div>
@@ -247,7 +257,7 @@
 
         <div class="col-xs-3">
           <span id="set-action">
-            <span class="glyphicon glyphicon-play-circle"></span>
+            –
           </span>
         </div>
       </div>
