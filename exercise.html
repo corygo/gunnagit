@@ -29,6 +29,36 @@
         top: 105px;
       }
 
+      #set-label {
+        font-size: 10px;
+        font-weight: 100;
+      }
+
+      #set-number {
+        font-size: 18px;
+      }
+
+      #set-large {
+        font-size: 30px;
+      }
+
+      #set-small {
+        font-size: 14px;
+        font-weight: 100;
+      }
+
+      #set-action {
+        font-size: 40px;
+      }
+
+      .selected-row {
+
+      }
+
+      .unselected-row {
+
+      }
+
     </style>
 
   <body>
@@ -142,14 +172,22 @@
           <tbody>
             <tr class="selected-row">
               <td>
-                <div class="lightgraybox" style="border: none;">
-                  <div>set</div>
-                  <div>1</div>
+                <div class="lightgraybox">
+                  <div id="set-label">set</div>
+                  <div id="set-number">1</div>
                 </div>
               </td>
-              <td>15 reps</td>
-              <td>75 lbs</td>
-              <td><span class="glyphicon glyphicon-play-circle"></span></td>
+              <td>
+                <div id="set-large">15</div>
+                <div id="set-small">reps</div>
+              </td>
+              <td>
+                <div id="set-large">75</div>
+                <div id="set-small">lbs</div>
+              </td>
+              <td id="set-action">
+                <span class="glyphicon glyphicon-play-circle"></span>
+              </td>
             </tr>
             <tr class="unselected-row">
               <td>
