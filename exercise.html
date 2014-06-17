@@ -59,13 +59,16 @@
       #set-box {
         background: #e6e6e6;
         padding: 5px;
-        margin-top: 10px;
+        margin-top: 8px;
+        width: 45px;
       }
 
       .selected-row {
         background-color: #FFFFFF;
         border: 4px solid;
         margin: 0px -10px;
+        height: 90px;
+        padding: 7px;
       }
 
       .unselected-row {
@@ -73,17 +76,27 @@
         background-color: white;
         border: 1px solid #ddd;
         border-top: none;
-        margin: 0px; 
+        margin: 0px;
       }
 
-      .unselected-row > #set-large {
+      .unselected-row #set-large {
         font-size: 40px;
         margin-bottom: -12px;
       }
 
-      .unselected-row > #set-action {
+      .unselected-row #set-action {
         font-size: 22px;
       }
+
+      #text-datacell {
+        margin-top: -4px;
+      }
+
+      #action-datacell {
+        margin-top: 3px;
+      }
+
+      
 
     </style>
 
@@ -201,17 +214,17 @@
           </div>
         </div>
 
-        <div class="col-xs-3">
+        <div id="text-datacell" class="col-xs-3">
           <div id="set-large">15</div>
           <div id="set-small">reps</div>
         </div>
 
-        <div class="col-xs-3">
+        <div id="text-datacell" class="col-xs-3">
           <div id="set-large">75</div>
           <div id="set-small">lbs</div>
         </div>
 
-        <div class="col-xs-3">
+        <div id="action-datacell" class="col-xs-3">
           <span id="set-action">
             <span class="glyphicon glyphicon-play-circle"></span>
           </span>
