@@ -26,12 +26,15 @@
       }
 
       #exercise-table {
-        top: 105px;
+        top: 100px;
+        background-color: white;
+        border: 1px solid #ddd;
       }
 
       #set-label {
         font-size: 10px;
         font-weight: 100;
+        margin-bottom: -4px;
       }
 
       #set-number {
@@ -39,20 +42,27 @@
       }
 
       #set-large {
-        font-size: 30px;
+        font-size: 40px;
       }
 
       #set-small {
         font-size: 14px;
-        font-weight: 100;
+        font-weight: 200;
+        margin-bottom: -12px;
       }
 
       #set-action {
-        font-size: 40px;
+        font-size: 50px;
+      }
+
+      #set-box {
+        background: #e6e6e6;
+        padding: 0px 5px;
       }
 
       .selected-row {
-
+        background-color: #FFFFFF;
+        border: 4px solid;
       }
 
       .unselected-row {
@@ -167,52 +177,79 @@
     </div>
 
     <div id="exercise-table" class="container abso-content text-center">
-      <div class="table-responsive">
-        <table class="table">
-          <tbody>
-            <tr class="selected-row">
-              <td>
-                <div class="lightgraybox">
-                  <div id="set-label">set</div>
-                  <div id="set-number">1</div>
-                </div>
-              </td>
-              <td>
-                <div id="set-large">15</div>
-                <div id="set-small">reps</div>
-              </td>
-              <td>
-                <div id="set-large">75</div>
-                <div id="set-small">lbs</div>
-              </td>
-              <td id="set-action">
-                <span class="glyphicon glyphicon-play-circle"></span>
-              </td>
-            </tr>
-            <tr class="unselected-row">
-              <td>
-                <div class="lightgraybox" style="border: none;">
-                  <div>set</div>
-                  <div>2</div>
-                </div>
-              </td>
-              <td>10 reps</td>
-              <td>85 lbs</td>
-              <td>–</td>
-            </tr>
-            <tr class="unselected-row">
-              <td>
-                <div class="lightgraybox" style="border: none;">
-                  <div>set</div>
-                  <div>3</div>
-                </div>
-              </td>
-              <td>7 reps</td>
-              <td>95 lbs</td>
-              <td>–</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="row selected-row">
+        <div class="col-xs-3">
+          <div id="set-box">
+            <div id="set-label">set</div>
+            <div id="set-number">1</div>
+          </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div id="set-large">15</div>
+          <div id="set-small">reps</div>
+        </div>
+
+        <div class="col-xs-3">
+          <div id="set-large">75</div>
+          <div id="set-small">lbs</div>
+        </div>
+
+        <div class="col-xs-3">
+          <span id="set-action">
+            <span class="glyphicon glyphicon-play-circle"></span>
+          </span>
+        </div>
+      </div>
+
+      <div class="row unselected-row">
+        <div class="col-xs-3">
+          <div id="set-box">
+            <div id="set-label">set</div>
+            <div id="set-number">1</div>
+          </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div id="set-large">15</div>
+          <div id="set-small">reps</div>
+        </div>
+
+        <div class="col-xs-3">
+          <div id="set-large">75</div>
+          <div id="set-small">lbs</div>
+        </div>
+
+        <div class="col-xs-3">
+          <span id="set-action">
+            <span class="glyphicon glyphicon-play-circle"></span>
+          </span>
+        </div>
+      </div>
+
+      <div class="row unselected-row">
+        <div class="col-xs-3">
+          <div id="set-box">
+            <div id="set-label">set</div>
+            <div id="set-number">1</div>
+          </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div id="set-large">15</div>
+          <div id="set-small">reps</div>
+        </div>
+
+        <div class="col-xs-3">
+          <div id="set-large">75</div>
+          <div id="set-small">lbs</div>
+        </div>
+
+        <div class="col-xs-3">
+          <span id="set-action">
+            <span class="glyphicon glyphicon-play-circle"></span>
+          </span>
+        </div>
       </div>
     </div>
 
