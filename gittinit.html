@@ -64,15 +64,19 @@
       }
 
       #progress-circle {
-        width:0;
-        height:0;
-        border-right:60px solid purple;
-        border-top:60px solid purple;
-        border-left:60px solid purple;
-        border-bottom:60px solid transparent;
+        width: 100%;
+        margin-left: -16px;
+        height: 0;
+        border-right: 16px solid #ddd;
+        border-top: 16px solid #ddd;
+        border-left: 16px solid #ddd;
+        border-bottom: 16px solid transparent;
         border-radius: 60px;
         -moz-border-radius: 60px;
-        -webkit-border-radius: 60px;
+        -webkit-border-radius: 6px;
+        padding: 50%;
+        border-radius: 50%;
+        margin-top: 15px;
       }
 
     </style>
@@ -198,7 +202,9 @@
         </div>
       </div>
 
-      <div id="progress-circle"></div>
+      <div class="container">
+        <div id="progress-circle"></div>
+      </div>
     </div>
 
 
