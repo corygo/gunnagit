@@ -191,11 +191,14 @@ ol {
 }
 
 .full-row {
-  color: #aaa;
   padding: 15px;
   font-weight: 200;
   position: absolute;
   width: 100%;
+}
+
+.medium-font {
+  color: #555;
 }
 
 .medium-light-font {
