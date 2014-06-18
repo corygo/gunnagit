@@ -177,11 +177,6 @@ ol {
   background-color: #eee;
 }
 
-.light-font {
-  color: #ccc;
-  font-weight: 400;
-}
-
 .narrow {
   margin: 0px 40px 0px 40px;
 }
@@ -203,8 +198,17 @@ ol {
   width: 100%;
 }
 
-.light {
+.medium-light-font {
   color: #888;
+}
+
+.light-font {
+  color: #ccc;
+  font-weight: 400;
+}
+
+.really-light-font {
+  color: #ddd;
 }
 
 .search-bar {
